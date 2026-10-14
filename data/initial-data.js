@@ -1,0 +1,3074 @@
+window.INITIAL_DATA = {
+   "items" : [
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-01-01",
+         "id" : "RM-2",
+         "months" : 1,
+         "startDate" : "2026-01-01",
+         "tags" : "",
+         "title" : "Basic Water Rescue (FNQ)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-01-01",
+         "id" : "RM-3",
+         "months" : 1,
+         "startDate" : "2026-01-01",
+         "tags" : "Training - AA",
+         "title" : "Scouting Essentials (Brisbane)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-01-01",
+         "id" : "RM-4",
+         "months" : 1,
+         "startDate" : "2026-01-01",
+         "tags" : "Training - AA",
+         "title" : "Scouting Management - Group Leaders (Brisbane)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-01-01",
+         "id" : "RM-1",
+         "months" : 1,
+         "startDate" : "2026-01-01",
+         "tags" : "Training - AA",
+         "title" : "Vertical - Abseiling Natural SP (Wide Bay)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-01-02",
+         "id" : "RM-5",
+         "months" : 1,
+         "startDate" : "2026-01-02",
+         "tags" : "Training - AA",
+         "title" : "Paddling - Kayak Inland Flatwater TP (Wide Bay)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-01-02",
+         "id" : "RM-6",
+         "months" : 1,
+         "startDate" : "2026-01-02",
+         "tags" : "Training - AA",
+         "title" : "Paddling - SUP Inland Flatwater SP"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-01-07",
+         "id" : "RM-7",
+         "months" : 1,
+         "startDate" : "2026-01-07",
+         "tags" : "Training - AA",
+         "title" : "Cycling - On Road - SP/TP (Wide Bay)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-01-07",
+         "id" : "RM-8",
+         "months" : 1,
+         "startDate" : "2026-01-07",
+         "tags" : "Training - AA",
+         "title" : "Cycling - On Road - SP/TP (Wide Bay)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-01-17",
+         "id" : "RM-9",
+         "months" : 1,
+         "startDate" : "2026-01-17",
+         "tags" : "Rover Scouts",
+         "title" : "Queensland Branch Rover Council Meeting"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-01-18",
+         "id" : "RM-10",
+         "months" : 1,
+         "startDate" : "2026-01-18",
+         "tags" : "",
+         "title" : "Branch Finance Committee"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-01-20",
+         "id" : "RM-11",
+         "months" : 1,
+         "startDate" : "2026-01-20",
+         "tags" : "Joey Scouts",
+         "title" : "Branch Joey Scout Council"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-01-25",
+         "id" : "RM-12",
+         "months" : 1,
+         "startDate" : "2026-01-25",
+         "tags" : "",
+         "title" : "Australia Day"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-01-26",
+         "id" : "RM-13",
+         "months" : 1,
+         "startDate" : "2026-01-26",
+         "tags" : "",
+         "title" : "Branch Executive Committee"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-02-04",
+         "id" : "RM-14",
+         "months" : 1,
+         "startDate" : "2026-02-04",
+         "tags" : "Training - AA",
+         "title" : "Cycling - Off Road - SP/TP (Brisbane)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-02-05",
+         "id" : "RM-15",
+         "months" : 1,
+         "startDate" : "2026-02-05",
+         "tags" : "Training - AA",
+         "title" : "Scouting Leadership (Online)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-02-07",
+         "id" : "RM-16",
+         "months" : 1,
+         "startDate" : "2026-02-07",
+         "tags" : "Training - AA",
+         "title" : "Cycling - Off Road - SP/TP (Wide Bay)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-02-07",
+         "id" : "RM-17",
+         "months" : 1,
+         "startDate" : "2026-02-07",
+         "tags" : "",
+         "title" : "Cycling - Off Road - SP/TP (Wide Bay)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-04-09",
+         "id" : "RM-18",
+         "months" : 3,
+         "startDate" : "2026-02-09",
+         "tags" : "Training - AA",
+         "title" : "Scouting Adventure (Brisbane)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-04-09",
+         "id" : "RM-20",
+         "months" : 3,
+         "startDate" : "2026-02-09",
+         "tags" : "",
+         "title" : "Scouting Adventure (Brisbane)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-04-09",
+         "id" : "RM-19",
+         "months" : 3,
+         "startDate" : "2026-02-09",
+         "tags" : "Training - AA",
+         "title" : "Scouting Essentials (Brisbane)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-04-09",
+         "id" : "RM-21",
+         "months" : 3,
+         "startDate" : "2026-02-09",
+         "tags" : "",
+         "title" : "Scouting Essentials (Brisbane)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-02-14",
+         "id" : "RM-22",
+         "months" : 1,
+         "startDate" : "2026-02-14",
+         "tags" : "Rover Scouts",
+         "title" : "Queensland Branch Rover Council Meeting"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-02-15",
+         "id" : "RM-23",
+         "months" : 1,
+         "startDate" : "2026-02-15",
+         "tags" : "",
+         "title" : "Branch Finance Committee"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-02-15",
+         "id" : "RM-24",
+         "months" : 1,
+         "startDate" : "2026-02-15",
+         "tags" : "",
+         "title" : "Branch Scout Section Council"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-02-17",
+         "id" : "RM-26",
+         "months" : 1,
+         "startDate" : "2026-02-17",
+         "tags" : "Joey Scouts",
+         "title" : "Branch Joey Scout Council"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-02-17",
+         "id" : "RM-25",
+         "months" : 1,
+         "startDate" : "2026-02-17",
+         "tags" : "",
+         "title" : "Branch Youth Venturer Scout Council"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-02-18",
+         "id" : "RM-27",
+         "months" : 1,
+         "startDate" : "2026-02-18",
+         "tags" : "",
+         "title" : "Branch Cub Scout Section Team Meeting"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-02-19",
+         "id" : "RM-28",
+         "months" : 1,
+         "startDate" : "2026-02-19",
+         "tags" : "",
+         "title" : "Founder's Day Dinner"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-02-21",
+         "id" : "RM-29",
+         "months" : 1,
+         "startDate" : "2026-02-19",
+         "tags" : "Training - AA",
+         "title" : "Scouting Adventure (Ipswich)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-02-21",
+         "id" : "RM-30",
+         "months" : 1,
+         "startDate" : "2026-02-19",
+         "tags" : "Training - AA",
+         "title" : "Scouting Adventure (Ipswich)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-02-21",
+         "id" : "RM-31",
+         "months" : 1,
+         "startDate" : "2026-02-19",
+         "tags" : "",
+         "title" : "Synchronised Cub Scout Camp (local groups)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-02-20",
+         "id" : "RM-32",
+         "months" : 1,
+         "startDate" : "2026-02-20",
+         "tags" : "Training - AA",
+         "title" : "Paddling - SUP Inland Flatwater SP/TP"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-02-20",
+         "id" : "RM-33",
+         "months" : 1,
+         "startDate" : "2026-02-20",
+         "tags" : "Training - AA",
+         "title" : "Paddling - SUP Inland Flatwater SP/TP"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-02-21",
+         "id" : "RM-34",
+         "months" : 1,
+         "startDate" : "2026-02-21",
+         "tags" : "",
+         "title" : "Founder's Day"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-02-22",
+         "id" : "RM-35",
+         "months" : 1,
+         "startDate" : "2026-02-22",
+         "tags" : "",
+         "title" : "ARA Nominations Deadline"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-02-23",
+         "id" : "RM-37",
+         "months" : 1,
+         "startDate" : "2026-02-23",
+         "tags" : "",
+         "title" : "Branch Executive Committee"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-02-23",
+         "id" : "RM-36",
+         "months" : 1,
+         "startDate" : "2026-02-23",
+         "tags" : "Training - AA",
+         "title" : "Scouting Essentials (Online)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-02-23",
+         "id" : "RM-38",
+         "months" : 1,
+         "startDate" : "2026-02-23",
+         "tags" : "Training: Wood Badge",
+         "title" : "Scouting Essentials (Online)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-02-23",
+         "id" : "RM-39",
+         "months" : 1,
+         "startDate" : "2026-02-23",
+         "tags" : "Training - AA",
+         "title" : "Scouting Essentials (Online)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-02-28",
+         "id" : "RM-40",
+         "months" : 1,
+         "startDate" : "2026-02-26",
+         "tags" : "Rover Scouts",
+         "title" : "Queensland Rover Moot (Q Moot)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-02-27",
+         "id" : "RM-41",
+         "months" : 1,
+         "startDate" : "2026-02-27",
+         "tags" : "Training - AA",
+         "title" : "Paddling - Canoe/Kayak Inland Flatwater SP"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-02-27",
+         "id" : "RM-42",
+         "months" : 1,
+         "startDate" : "2026-02-27",
+         "tags" : "",
+         "title" : "Paddling - Canoe/Kayak Inland Flatwater SP"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-02-27",
+         "id" : "RM-44",
+         "months" : 1,
+         "startDate" : "2026-02-27",
+         "tags" : "Training - AA",
+         "title" : "Paddling - Canoe/Kayak Inland Flatwater SP"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-02-27",
+         "id" : "RM-45",
+         "months" : 1,
+         "startDate" : "2026-02-27",
+         "tags" : "Training - AA",
+         "title" : "Paddling - Canoe/Kayak Inland Flatwater SP"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-02-27",
+         "id" : "RM-43",
+         "months" : 1,
+         "startDate" : "2026-02-27",
+         "tags" : "Training - AA",
+         "title" : "Paddling - Kayak Inland Flatwater TP (Wide Bay)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-02-28",
+         "id" : "RM-46",
+         "months" : 1,
+         "startDate" : "2026-02-27",
+         "tags" : "Training - AA",
+         "title" : "Scouting Adventure (Townsville)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-02-28",
+         "id" : "RM-47",
+         "months" : 1,
+         "startDate" : "2026-02-28",
+         "tags" : "Training - AA",
+         "title" : "Paddling - SUP Inland Flatwater SP"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-03-07",
+         "id" : "RM-49",
+         "months" : 1,
+         "startDate" : "2026-03-05",
+         "tags" : "",
+         "title" : "Region Commissioners Conference"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-03-07",
+         "id" : "RM-48",
+         "months" : 1,
+         "startDate" : "2026-03-05",
+         "tags" : "Training - AA",
+         "title" : "Scouting Leadership (Rockhampton)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-03-06",
+         "id" : "RM-50",
+         "months" : 1,
+         "startDate" : "2026-03-06",
+         "tags" : "Training - AA",
+         "title" : "Basic Water Rescue (FNR)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-03-07",
+         "id" : "RM-51",
+         "months" : 1,
+         "startDate" : "2026-03-06",
+         "tags" : "Training - AA",
+         "title" : "Snorkelling - SP/Guide (Sunshine Coast)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-03-31",
+         "id" : "RM-52",
+         "months" : 1,
+         "startDate" : "2026-03-10",
+         "tags" : "",
+         "title" : "Scouting Management - Group Leaders (Online)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-03-10",
+         "id" : "RM-53",
+         "months" : 1,
+         "startDate" : "2026-03-10",
+         "tags" : "Training - AA",
+         "title" : "Scouting Management - Group Leaders (Online)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-03-14",
+         "id" : "RM-55",
+         "months" : 1,
+         "startDate" : "2026-03-12",
+         "tags" : "Training - AA",
+         "title" : "Scouting Adventure (Mackay)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-03-14",
+         "id" : "RM-56",
+         "months" : 1,
+         "startDate" : "2026-03-12",
+         "tags" : "Training - AA",
+         "title" : "Scouting Essentials (Emerald) Course"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-03-14",
+         "id" : "RM-54",
+         "months" : 1,
+         "startDate" : "2026-03-12",
+         "tags" : "Training - AA",
+         "title" : "Scouting Leadership (Brisbane)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-03-14",
+         "id" : "RM-57",
+         "months" : 1,
+         "startDate" : "2026-03-12",
+         "tags" : "Training - AA",
+         "title" : "Scouting Leadership (Townsville)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-03-13",
+         "id" : "RM-58",
+         "months" : 1,
+         "startDate" : "2026-03-13",
+         "tags" : "",
+         "title" : "Hop-a-long Leader Conference"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-03-14",
+         "id" : "RM-59",
+         "months" : 1,
+         "startDate" : "2026-03-14",
+         "tags" : "Rover Scouts",
+         "title" : "Queensland Branch Rover Council Meeting"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-03-15",
+         "id" : "RM-61",
+         "months" : 1,
+         "startDate" : "2026-03-15",
+         "tags" : "",
+         "title" : "Branch Finance Committee"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-03-15",
+         "id" : "RM-60",
+         "months" : 1,
+         "startDate" : "2026-03-15",
+         "tags" : "",
+         "title" : "Branch Scout Section Council"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-03-17",
+         "id" : "RM-62",
+         "months" : 1,
+         "startDate" : "2026-03-17",
+         "tags" : "",
+         "title" : "Branch Youth Venturer Scout Council"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-03-18",
+         "id" : "RM-63",
+         "months" : 1,
+         "startDate" : "2026-03-18",
+         "tags" : "",
+         "title" : "Branch Cub Scout Section Team Meeting"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-03-21",
+         "id" : "RM-64",
+         "months" : 1,
+         "startDate" : "2026-03-19",
+         "tags" : "Training - AA",
+         "title" : "Scouting Adventure (Brisbane)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-03-21",
+         "id" : "RM-66",
+         "months" : 1,
+         "startDate" : "2026-03-19",
+         "tags" : "Training - AA",
+         "title" : "Scouting Essentials (Brisbane)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-03-21",
+         "id" : "RM-67",
+         "months" : 1,
+         "startDate" : "2026-03-19",
+         "tags" : "Training - AA",
+         "title" : "Scouting Essentials (FNR)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-03-21",
+         "id" : "RM-65",
+         "months" : 1,
+         "startDate" : "2026-03-19",
+         "tags" : "Training - AA",
+         "title" : "Scouting Management - Group Leaders (Brisbane)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-03-20",
+         "id" : "RM-68",
+         "months" : 1,
+         "startDate" : "2026-03-20",
+         "tags" : "",
+         "title" : "Harmony Day"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-03-23",
+         "id" : "RM-69",
+         "months" : 1,
+         "startDate" : "2026-03-23",
+         "tags" : "",
+         "title" : "Branch Executive Committee"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-03-28",
+         "id" : "RM-70",
+         "months" : 1,
+         "startDate" : "2026-03-26",
+         "tags" : "",
+         "title" : "Region Activity Weekend (RAW)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-03-27",
+         "id" : "RM-72",
+         "months" : 1,
+         "startDate" : "2026-03-27",
+         "tags" : "Training - AA",
+         "title" : "Basic Water Rescue (FNQ)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-03-28",
+         "id" : "RM-71",
+         "months" : 1,
+         "startDate" : "2026-03-27",
+         "tags" : "Training - AA",
+         "title" : "Vertical - Abseiling Natural SP (Wide Bay)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-04-02",
+         "id" : "RM-73",
+         "months" : 1,
+         "startDate" : "2026-04-02",
+         "tags" : "",
+         "title" : "Good Friday"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-04-05",
+         "id" : "RM-74",
+         "months" : 1,
+         "startDate" : "2026-04-02",
+         "tags" : "",
+         "title" : "Kiwi Woggle"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-04-03",
+         "id" : "RM-75",
+         "months" : 1,
+         "startDate" : "2026-04-03",
+         "tags" : "",
+         "title" : "Easter Saturday"
+      },
+      {
+         "category" : "Reference",
+         "endDate" : "2026-04-19",
+         "id" : "RM-76",
+         "months" : 1,
+         "startDate" : "2026-04-03",
+         "tags" : "",
+         "title" : "School Holidays (April)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-04-04",
+         "id" : "RM-77",
+         "months" : 1,
+         "startDate" : "2026-04-04",
+         "tags" : "",
+         "title" : "Easter Sunday"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-04-05",
+         "id" : "RM-78",
+         "months" : 1,
+         "startDate" : "2026-04-05",
+         "tags" : "",
+         "title" : "Easter Monday"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-04-12",
+         "id" : "RM-79",
+         "months" : 1,
+         "startDate" : "2026-04-08",
+         "tags" : "",
+         "title" : "Cuboree"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-04-11",
+         "id" : "RM-80",
+         "months" : 1,
+         "startDate" : "2026-04-09",
+         "tags" : "Training - AA",
+         "title" : "Scouting Essentials (Bundaberg)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-04-10",
+         "id" : "RM-81",
+         "months" : 1,
+         "startDate" : "2026-04-10",
+         "tags" : "",
+         "title" : "Scouting Leadership (Online)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-04-10",
+         "id" : "RM-82",
+         "months" : 1,
+         "startDate" : "2026-04-10",
+         "tags" : "Training - AA",
+         "title" : "Scouting Leadership (Online)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-04-14",
+         "id" : "RM-83",
+         "months" : 1,
+         "startDate" : "2026-04-14",
+         "tags" : "Joey Scouts",
+         "title" : "Branch Joey Scout Council"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-04-14",
+         "id" : "RM-84",
+         "months" : 1,
+         "startDate" : "2026-04-14",
+         "tags" : "",
+         "title" : "Branch Youth Venturer Scout Council"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-04-15",
+         "id" : "RM-85",
+         "months" : 1,
+         "startDate" : "2026-04-15",
+         "tags" : "Cub Scouts",
+         "title" : "Branch Cub Scout Section Team Meeting"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-04-18",
+         "id" : "RM-86",
+         "months" : 1,
+         "startDate" : "2026-04-18",
+         "tags" : "Rover Scouts",
+         "title" : "Queensland Branch Rover Council Meeting"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-04-19",
+         "id" : "RM-88",
+         "months" : 1,
+         "startDate" : "2026-04-19",
+         "tags" : "",
+         "title" : "Branch Finance Committee"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-04-19",
+         "id" : "RM-87",
+         "months" : 1,
+         "startDate" : "2026-04-19",
+         "tags" : "",
+         "title" : "Branch Scout Section Council"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-04-21",
+         "id" : "RM-89",
+         "months" : 1,
+         "startDate" : "2026-04-21",
+         "tags" : "Training - AA",
+         "title" : "Scouting Management - Commissioners and Advisors (Online)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-04-24",
+         "id" : "RM-90",
+         "months" : 1,
+         "startDate" : "2026-04-24",
+         "tags" : "",
+         "title" : "ANZAC Day"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-04-25",
+         "id" : "RM-91",
+         "months" : 1,
+         "startDate" : "2026-04-25",
+         "tags" : "Joey Scouts",
+         "title" : "Joey Leader Online Forum"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-04-27",
+         "id" : "RM-92",
+         "months" : 1,
+         "startDate" : "2026-04-27",
+         "tags" : "",
+         "title" : "Branch Executive Committee"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-05-03",
+         "id" : "RM-93",
+         "months" : 2,
+         "startDate" : "2026-04-30",
+         "tags" : "",
+         "title" : "TNT (Test'N'Track) Moot"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-05-01",
+         "id" : "RM-94",
+         "months" : 1,
+         "startDate" : "2026-05-01",
+         "tags" : "Training - AA",
+         "title" : "Cycling - Off Road - SP/TP (Brisbane)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-05-03",
+         "id" : "RM-95",
+         "months" : 1,
+         "startDate" : "2026-05-03",
+         "tags" : "",
+         "title" : "Labour Day"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-05-05",
+         "id" : "RM-97",
+         "months" : 1,
+         "startDate" : "2026-05-05",
+         "tags" : "Training - AA",
+         "title" : "Scouting Adventure (FNQ)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-05-05",
+         "id" : "RM-96",
+         "months" : 1,
+         "startDate" : "2026-05-05",
+         "tags" : "Training - AA",
+         "title" : "Scouting Essentials (Rockhampton)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-05-07",
+         "id" : "RM-98",
+         "months" : 1,
+         "startDate" : "2026-05-07",
+         "tags" : "Training - AA",
+         "title" : "Basic Water Rescue (FNQ)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-05-07",
+         "id" : "RM-99",
+         "months" : 1,
+         "startDate" : "2026-05-07",
+         "tags" : "",
+         "title" : "Basic Water Rescue (FNQ)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-05-09",
+         "id" : "RM-100",
+         "months" : 1,
+         "startDate" : "2026-05-08",
+         "tags" : "Training - AA",
+         "title" : "Vertical - Abseiling Natural TP (Wide Bay)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-05-16",
+         "id" : "RM-101",
+         "months" : 1,
+         "startDate" : "2026-05-14",
+         "tags" : "Training - AA",
+         "title" : "Scouting Adventure (Bundaberg)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-05-16",
+         "id" : "RM-103",
+         "months" : 1,
+         "startDate" : "2026-05-14",
+         "tags" : "Training - AA",
+         "title" : "Scouting Essentials (Toowoomba)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-05-16",
+         "id" : "RM-102",
+         "months" : 1,
+         "startDate" : "2026-05-14",
+         "tags" : "Training - AA",
+         "title" : "Scouting Essentials (Townsville)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-05-16",
+         "id" : "RM-104",
+         "months" : 1,
+         "startDate" : "2026-05-16",
+         "tags" : "",
+         "title" : "Queensland Branch Rover Council Meeting"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-05-17",
+         "id" : "RM-105",
+         "months" : 1,
+         "startDate" : "2026-05-17",
+         "tags" : "",
+         "title" : "Branch Finance Committee"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-05-17",
+         "id" : "RM-106",
+         "months" : 1,
+         "startDate" : "2026-05-17",
+         "tags" : "",
+         "title" : "Branch Scout Section Council"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-05-19",
+         "id" : "RM-107",
+         "months" : 1,
+         "startDate" : "2026-05-19",
+         "tags" : "",
+         "title" : "Branch Youth Venturer Scout Council"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-05-20",
+         "id" : "RM-108",
+         "months" : 1,
+         "startDate" : "2026-05-20",
+         "tags" : "Cub Scouts",
+         "title" : "Branch Cub Scout Section Team Meeting"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-05-20",
+         "id" : "RM-109",
+         "months" : 1,
+         "startDate" : "2026-05-20",
+         "tags" : "Training - AA",
+         "title" : "Scouting Essentials (Online)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-05-20",
+         "id" : "RM-110",
+         "months" : 1,
+         "startDate" : "2026-05-20",
+         "tags" : "",
+         "title" : "Scouting Essentials (Online)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-05-23",
+         "id" : "RM-111",
+         "months" : 1,
+         "startDate" : "2026-05-21",
+         "tags" : "Training - AA",
+         "title" : "Scouting Adventure (Brisbane)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-05-23",
+         "id" : "RM-112",
+         "months" : 1,
+         "startDate" : "2026-05-21",
+         "tags" : "Training - AA",
+         "title" : "Scouting Essentials (Brisbane)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-05-23",
+         "id" : "RM-113",
+         "months" : 1,
+         "startDate" : "2026-05-21",
+         "tags" : "Training - AA",
+         "title" : "Scouting Management - Group Leaders (Brisbane)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-05-22",
+         "id" : "RM-114",
+         "months" : 1,
+         "startDate" : "2026-05-22",
+         "tags" : "",
+         "title" : "Moreton Region Raft Race"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-05-23",
+         "id" : "RM-115",
+         "months" : 1,
+         "startDate" : "2026-05-22",
+         "tags" : "Venturer Scouts",
+         "title" : "Operation Archer\u00a0"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-05-23",
+         "id" : "RM-116",
+         "months" : 1,
+         "startDate" : "2026-05-22",
+         "tags" : "Training - AA",
+         "title" : "Paddling - Canoe Inland Flatwater TP (Cairns)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-05-25",
+         "id" : "RM-117",
+         "months" : 1,
+         "startDate" : "2026-05-25",
+         "tags" : "",
+         "title" : "Branch Executive Committee"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-05-30",
+         "id" : "RM-118",
+         "months" : 1,
+         "startDate" : "2026-05-30",
+         "tags" : "",
+         "title" : "Joey Scout Step Out"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-06-01",
+         "id" : "RM-119",
+         "months" : 1,
+         "startDate" : "2026-06-01",
+         "tags" : "Training - AA",
+         "title" : "Scouting Leadership (Online)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-06-04",
+         "id" : "RM-120",
+         "months" : 1,
+         "startDate" : "2026-06-02",
+         "tags" : "Training - AA",
+         "title" : "Scouting Leadership (Rockhampton)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-06-04",
+         "id" : "RM-121",
+         "months" : 1,
+         "startDate" : "2026-06-04",
+         "tags" : "Training - AA",
+         "title" : "Scouting Adventure (FNQ)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-06-04",
+         "id" : "RM-122",
+         "months" : 1,
+         "startDate" : "2026-06-04",
+         "tags" : "Training - AA",
+         "title" : "Scouting Essentials (Rockhampton)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-06-05",
+         "id" : "RM-123",
+         "months" : 1,
+         "startDate" : "2026-06-05",
+         "tags" : "Cub Scouts",
+         "title" : "Cub Scout Day Out (local groups)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-06-13",
+         "id" : "RM-125",
+         "months" : 1,
+         "startDate" : "2026-06-11",
+         "tags" : "",
+         "title" : "Region Activity Weekend (RAW)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-06-13",
+         "id" : "RM-124",
+         "months" : 1,
+         "startDate" : "2026-06-11",
+         "tags" : "Training - AA",
+         "title" : "Scouting Adventure (Brisbane)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-06-13",
+         "id" : "RM-126",
+         "months" : 1,
+         "startDate" : "2026-06-11",
+         "tags" : "Training - AA",
+         "title" : "Scouting Leadership (Brisbane)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-06-12",
+         "id" : "RM-127",
+         "months" : 1,
+         "startDate" : "2026-06-12",
+         "tags" : "Training - AA",
+         "title" : "Basic Water Rescue (FNQ)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-06-14",
+         "id" : "RM-129",
+         "months" : 1,
+         "startDate" : "2026-06-14",
+         "tags" : "",
+         "title" : "Branch Finance Committee"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-06-14",
+         "id" : "RM-128",
+         "months" : 1,
+         "startDate" : "2026-06-14",
+         "tags" : "",
+         "title" : "Branch Scout Section Council"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-06-16",
+         "id" : "RM-131",
+         "months" : 1,
+         "startDate" : "2026-06-16",
+         "tags" : "Joey Scouts",
+         "title" : "Branch Joey Scout Council"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-06-16",
+         "id" : "RM-130",
+         "months" : 1,
+         "startDate" : "2026-06-16",
+         "tags" : "",
+         "title" : "Branch Youth Venturer Scout Council"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-06-17",
+         "id" : "RM-132",
+         "months" : 1,
+         "startDate" : "2026-06-17",
+         "tags" : "Cub Scouts",
+         "title" : "Branch Cub Scout Section Team Meeting"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-06-21",
+         "id" : "RM-133",
+         "months" : 1,
+         "startDate" : "2026-06-17",
+         "tags" : "Rover Scouts",
+         "title" : "Far North Region Moot"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-06-20",
+         "id" : "RM-134",
+         "months" : 1,
+         "startDate" : "2026-06-19",
+         "tags" : "Scouts",
+         "title" : "Operation Night Owl"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-06-20",
+         "id" : "RM-135",
+         "months" : 1,
+         "startDate" : "2026-06-20",
+         "tags" : "",
+         "title" : "Queensland Branch Rover Council Meeting"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-06-22",
+         "id" : "RM-136",
+         "months" : 1,
+         "startDate" : "2026-06-22",
+         "tags" : "",
+         "title" : "Branch Executive Committee"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-06-26",
+         "id" : "RM-137",
+         "months" : 1,
+         "startDate" : "2026-06-25",
+         "tags" : "",
+         "title" : "Darling Downs Revue"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-06-27",
+         "id" : "RM-138",
+         "months" : 1,
+         "startDate" : "2026-06-26",
+         "tags" : "Training - AA",
+         "title" : "Vertical - Abseiling (Natural Surfaces) SP (FNR)"
+      },
+      {
+         "category" : "Youth Program Event",
+         "endDate" : "2026-07-03",
+         "id" : "RM-139",
+         "months" : 2,
+         "startDate" : "2026-06-27",
+         "tags" : "",
+         "title" : "LEAP North (Townsville)"
+      },
+      {
+         "category" : "Reference",
+         "endDate" : "2026-07-14",
+         "id" : "RM-140",
+         "months" : 2,
+         "startDate" : "2026-06-27",
+         "tags" : "",
+         "title" : "School Holidays (July)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-06-29",
+         "id" : "RM-141",
+         "months" : 1,
+         "startDate" : "2026-06-29",
+         "tags" : "",
+         "title" : "Youth Awards Submission Deadline"
+      },
+      {
+         "category" : "Prep",
+         "endDate" : "2026-08-30",
+         "id" : "RM-142",
+         "months" : 3,
+         "startDate" : "2026-06-30",
+         "tags" : "",
+         "title" : "Preparing for Launch (Achievement Pathways Improvements (2026))"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-07-02",
+         "id" : "RM-144",
+         "months" : 1,
+         "startDate" : "2026-07-02",
+         "tags" : "Training - AA",
+         "title" : "Basic Water Rescue (FNR)"
+      },
+      {
+         "category" : "Youth Program Event",
+         "endDate" : "2026-07-06",
+         "id" : "RM-145",
+         "months" : 1,
+         "startDate" : "2026-07-02",
+         "tags" : "",
+         "title" : "LEAP South (Brisbane)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-08-02",
+         "id" : "RM-143",
+         "months" : 2,
+         "startDate" : "2026-07-02",
+         "tags" : "Training - AA",
+         "title" : "Snorkelling - SP/Guide (Sunshine Coast)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-07-11",
+         "id" : "RM-146",
+         "months" : 1,
+         "startDate" : "2026-07-09",
+         "tags" : "Training - AA",
+         "title" : "Scouting Adventure (Brisbane)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-07-11",
+         "id" : "RM-147",
+         "months" : 1,
+         "startDate" : "2026-07-09",
+         "tags" : "Training - AA",
+         "title" : "Scouting Essentials (Brisbane)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-07-10",
+         "id" : "RM-148",
+         "months" : 1,
+         "startDate" : "2026-07-10",
+         "tags" : "",
+         "title" : "Kokoda Junior Games"
+      },
+      {
+         "category" : "Youth Program Event",
+         "endDate" : "2026-07-14",
+         "id" : "RM-150",
+         "months" : 1,
+         "startDate" : "2026-07-14",
+         "tags" : "Joey Scouts",
+         "title" : "Branch Joey Scout Council"
+      },
+      {
+         "category" : "Youth Program Event",
+         "endDate" : "2026-07-14",
+         "id" : "RM-149",
+         "months" : 1,
+         "startDate" : "2026-07-14",
+         "tags" : "",
+         "title" : "Branch Youth Venturer Scout Council"
+      },
+      {
+         "category" : "Youth Program Event",
+         "endDate" : "2026-07-15",
+         "id" : "RM-152",
+         "months" : 1,
+         "startDate" : "2026-07-15",
+         "tags" : "Cub Scouts",
+         "title" : "Branch Cub Scout Section Team Meeting"
+      },
+      {
+         "category" : "Youth Program Event",
+         "endDate" : "2026-07-16",
+         "id" : "RM-151",
+         "months" : 1,
+         "startDate" : "2026-07-15",
+         "tags" : "",
+         "title" : "C5 signed off"
+      },
+      {
+         "category" : "Youth Program Event",
+         "endDate" : "2026-07-18",
+         "id" : "RM-157",
+         "months" : 1,
+         "startDate" : "2026-07-16",
+         "tags" : "",
+         "title" : "Branch Youth Council Launch"
+      },
+      {
+         "category" : "Youth Program Event",
+         "endDate" : "2026-07-18",
+         "id" : "RM-156",
+         "months" : 1,
+         "startDate" : "2026-07-16",
+         "tags" : "",
+         "title" : "District Commissioners Conference"
+      },
+      {
+         "category" : "Youth Program Event",
+         "endDate" : "2026-07-18",
+         "id" : "RM-155",
+         "months" : 1,
+         "startDate" : "2026-07-16",
+         "tags" : "",
+         "title" : "Queensland Branch Rover Council Annual Conference"
+      },
+      {
+         "category" : "Youth Program Event",
+         "endDate" : "2026-07-18",
+         "id" : "RM-158",
+         "months" : 1,
+         "startDate" : "2026-07-16",
+         "tags" : "",
+         "title" : "Region Commissioners Conference"
+      },
+      {
+         "category" : "Prep",
+         "endDate" : "2026-07-16",
+         "id" : "RM-159",
+         "months" : 1,
+         "startDate" : "2026-07-16",
+         "tags" : "",
+         "title" : "Scout Shop provided with updated artwork for Record Books and Program Handbook, to enable start of production (Achievement Pathways Improvements (2026))"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-07-18",
+         "id" : "RM-153",
+         "months" : 1,
+         "startDate" : "2026-07-16",
+         "tags" : "Training - AA",
+         "title" : "Scouting Adventure (Townsville)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-07-18",
+         "id" : "RM-154",
+         "months" : 1,
+         "startDate" : "2026-07-16",
+         "tags" : "Training - AA",
+         "title" : "Scouting Leadership (Rockhampton)"
+      },
+      {
+         "category" : "Youth Program Event",
+         "endDate" : "2026-07-18",
+         "id" : "RM-160",
+         "months" : 1,
+         "startDate" : "2026-07-18",
+         "tags" : "",
+         "title" : "Queensland Branch Rover Council Meeting"
+      },
+      {
+         "category" : "Youth Program Event",
+         "endDate" : "2026-07-18",
+         "id" : "RM-161",
+         "months" : 1,
+         "startDate" : "2026-07-18",
+         "tags" : "Section : Cub Scouts|Section : Joey Scouts|Section : Venturer Scouts|Section: Rover Scouts|Section: Scouts",
+         "title" : "Tyakunda Trailblazer"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-07-19",
+         "id" : "RM-163",
+         "months" : 1,
+         "startDate" : "2026-07-19",
+         "tags" : "",
+         "title" : "Branch Finance Committee"
+      },
+      {
+         "category" : "Youth Program Event",
+         "endDate" : "2026-07-19",
+         "id" : "RM-162",
+         "months" : 1,
+         "startDate" : "2026-07-19",
+         "tags" : "",
+         "title" : "Branch Scout Section Council"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-07-20",
+         "id" : "RM-164",
+         "months" : 1,
+         "startDate" : "2026-07-20",
+         "tags" : "Training - AA",
+         "title" : "Scouting Management - Group Leaders (Online)"
+      },
+      {
+         "category" : "Youth Program Event",
+         "endDate" : "2026-07-25",
+         "id" : "RM-165",
+         "months" : 1,
+         "startDate" : "2026-07-23",
+         "tags" : "",
+         "title" : "Adventurous Activities Conference"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-07-27",
+         "id" : "RM-166",
+         "months" : 1,
+         "startDate" : "2026-07-27",
+         "tags" : "",
+         "title" : "Branch Executive Committee"
+      },
+      {
+         "category" : "Youth Program Event",
+         "endDate" : "2026-07-29",
+         "id" : "RM-167",
+         "months" : 1,
+         "startDate" : "2026-07-29",
+         "tags" : "",
+         "title" : "Branch Council (AGM)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-08-01",
+         "id" : "RM-168",
+         "months" : 2,
+         "startDate" : "2026-07-30",
+         "tags" : "Training - AA",
+         "title" : "Scouting Essentials (Sunshine Coast)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-08-01",
+         "id" : "RM-169",
+         "months" : 2,
+         "startDate" : "2026-07-30",
+         "tags" : "Training - AA",
+         "title" : "Scouting Leadership (FNR)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-07-31",
+         "id" : "RM-173",
+         "months" : 1,
+         "startDate" : "2026-07-31",
+         "tags" : "Training - AA",
+         "title" : "Cycling - On Road - SP/TP (Wide Bay)"
+      },
+      {
+         "category" : "Comms",
+         "endDate" : "2026-07-31",
+         "id" : "RM-171",
+         "months" : 1,
+         "startDate" : "2026-07-31",
+         "tags" : "",
+         "title" : "Implementation support packs provided to Branch program teams (Achievement Pathways Improvements (2026))"
+      },
+      {
+         "category" : "Event",
+         "endDate" : "2026-08-13",
+         "id" : "RM-170",
+         "months" : 2,
+         "startDate" : "2026-07-31",
+         "tags" : "",
+         "title" : "Information sessions for Program Support Leaders (Achievement Pathways Improvements (2026))"
+      },
+      {
+         "category" : "Youth Program Event",
+         "endDate" : "2026-07-31",
+         "id" : "RM-172",
+         "months" : 1,
+         "startDate" : "2026-07-31",
+         "tags" : "",
+         "title" : "Joey Scout Jaunt (South)"
+      },
+      {
+         "category" : "Comms",
+         "endDate" : "2026-07-31",
+         "id" : "RM-175",
+         "months" : 1,
+         "startDate" : "2026-07-31",
+         "tags" : "",
+         "title" : "Memo to all National Training Team (Achievement Pathways Improvements (2026))"
+      },
+      {
+         "category" : "Youth Program Event",
+         "endDate" : "2026-07-31",
+         "id" : "RM-174",
+         "months" : 1,
+         "startDate" : "2026-07-31",
+         "tags" : "",
+         "title" : "World Scout Day"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-08-01",
+         "id" : "RM-176",
+         "months" : 1,
+         "startDate" : "2026-08-01",
+         "tags" : "Training - AA",
+         "title" : "Cycling - Off Road - SP/TP (Wide Bay)"
+      },
+      {
+         "category" : "Event",
+         "endDate" : "2026-08-03",
+         "id" : "RM-177",
+         "months" : 1,
+         "startDate" : "2026-08-03",
+         "tags" : "",
+         "title" : "Achievement Pathways Improvements Briefing (Qld / ACT) (Achievement Pathways Improvements (2026))"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-08-04",
+         "id" : "RM-178",
+         "months" : 1,
+         "startDate" : "2026-08-04",
+         "tags" : "Training - AA",
+         "title" : "Basic Water Rescue (FNQ)"
+      },
+      {
+         "category" : "Youth Program Event",
+         "endDate" : "2026-08-08",
+         "id" : "RM-181",
+         "months" : 1,
+         "startDate" : "2026-08-07",
+         "tags" : "",
+         "title" : "Operation Nighthawk"
+      },
+      {
+         "category" : "Youth Program Event",
+         "endDate" : "2026-08-15",
+         "id" : "RM-179",
+         "months" : 1,
+         "startDate" : "2026-08-07",
+         "tags" : "",
+         "title" : "Royal Queensland Show (Ekka)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-09-07",
+         "id" : "RM-180",
+         "months" : 2,
+         "startDate" : "2026-08-07",
+         "tags" : "Training - AA",
+         "title" : "Vertical - Abseiling (Natural Surfaces) SP (FNR)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-09-07",
+         "id" : "RM-182",
+         "months" : 2,
+         "startDate" : "2026-08-07",
+         "tags" : "Training - AA",
+         "title" : "Vertical - Abseiling (Natural Surfaces) SP (FNR)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-08-08",
+         "id" : "RM-183",
+         "months" : 1,
+         "startDate" : "2026-08-07",
+         "tags" : "Training - AA",
+         "title" : "Vertical - Abseiling (Natural Surfaces) SP (FNR)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-08-09",
+         "id" : "RM-184",
+         "months" : 1,
+         "startDate" : "2026-08-09",
+         "tags" : "",
+         "title" : "Scouting Management - Commissioners and Advisors (Online)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-08-09",
+         "id" : "RM-185",
+         "months" : 1,
+         "startDate" : "2026-08-09",
+         "tags" : "Training - AA",
+         "title" : "Scouting Management - Commissioners and Advisors (Online)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-08-10",
+         "id" : "RM-186",
+         "months" : 1,
+         "startDate" : "2026-08-10",
+         "tags" : "Training - AA",
+         "title" : "Basic Water Rescue (Wide Bay)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-08-10",
+         "id" : "RM-187",
+         "months" : 1,
+         "startDate" : "2026-08-10",
+         "tags" : "",
+         "title" : "Basic Water Rescue (Wide Bay)"
+      },
+      {
+         "category" : "Youth Program Event",
+         "endDate" : "2026-08-11",
+         "id" : "RM-188",
+         "months" : 1,
+         "startDate" : "2026-08-11",
+         "tags" : "",
+         "title" : "Royal Queensland Show (Ekka) Public Holiday"
+      },
+      {
+         "category" : "Event",
+         "endDate" : "2026-08-12",
+         "id" : "RM-189",
+         "months" : 1,
+         "startDate" : "2026-08-12",
+         "tags" : "",
+         "title" : "National Youth Program Team approves OAS IStatement wording changes (Achievement Pathways Improvements (2026))"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-08-15",
+         "id" : "RM-190",
+         "months" : 1,
+         "startDate" : "2026-08-14",
+         "tags" : "Training - AA",
+         "title" : "Archery - SP/TP/G (Wide Bay)"
+      },
+      {
+         "category" : "Youth Program Event",
+         "endDate" : "2026-08-15",
+         "id" : "RM-191",
+         "months" : 1,
+         "startDate" : "2026-08-15",
+         "tags" : "",
+         "title" : "Queensland Branch Rover Council Meeting"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-08-16",
+         "id" : "RM-193",
+         "months" : 1,
+         "startDate" : "2026-08-16",
+         "tags" : "",
+         "title" : "Branch Finance Committee"
+      },
+      {
+         "category" : "Youth Program Event",
+         "endDate" : "2026-08-16",
+         "id" : "RM-192",
+         "months" : 1,
+         "startDate" : "2026-08-16",
+         "tags" : "",
+         "title" : "Branch Scout Section Council"
+      },
+      {
+         "category" : "Youth Program Event",
+         "endDate" : "2026-08-18",
+         "id" : "RM-194",
+         "months" : 1,
+         "startDate" : "2026-08-18",
+         "tags" : "Joey Scouts",
+         "title" : "Branch Joey Scout Council"
+      },
+      {
+         "category" : "Youth Program Event",
+         "endDate" : "2026-08-18",
+         "id" : "RM-195",
+         "months" : 1,
+         "startDate" : "2026-08-18",
+         "tags" : "",
+         "title" : "Branch Youth Venturer Scout Council"
+      },
+      {
+         "category" : "Youth Program Event",
+         "endDate" : "2026-08-19",
+         "id" : "RM-199",
+         "months" : 1,
+         "startDate" : "2026-08-19",
+         "tags" : "Cub Scouts",
+         "title" : "Branch Cub Scout Section Team Meeting"
+      },
+      {
+         "category" : "Event",
+         "endDate" : "2026-08-19",
+         "id" : "RM-196",
+         "months" : 1,
+         "startDate" : "2026-08-19",
+         "tags" : "",
+         "title" : "Presentation to National Rover Council on improvements and program support (Achievement Pathways Improvements (2026))"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-08-19",
+         "id" : "RM-197",
+         "months" : 1,
+         "startDate" : "2026-08-19",
+         "tags" : "",
+         "title" : "Scouting Essentials (Online)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-08-19",
+         "id" : "RM-198",
+         "months" : 1,
+         "startDate" : "2026-08-19",
+         "tags" : "Training - AA",
+         "title" : "Scouting Essentials (Online)"
+      },
+      {
+         "category" : "Youth Program Event",
+         "endDate" : "2026-08-22",
+         "id" : "RM-200",
+         "months" : 1,
+         "startDate" : "2026-08-20",
+         "tags" : "Cub Scouts",
+         "title" : "Cub Scout Leader Expo"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-08-22",
+         "id" : "RM-201",
+         "months" : 1,
+         "startDate" : "2026-08-20",
+         "tags" : "Training - AA",
+         "title" : "Scouting Adventure (Toowoomba)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-08-22",
+         "id" : "RM-202",
+         "months" : 1,
+         "startDate" : "2026-08-20",
+         "tags" : "Training - AA",
+         "title" : "Vertical - Abseiling Natural Surfaces -TP (FNR)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-08-24",
+         "id" : "RM-203",
+         "months" : 1,
+         "startDate" : "2026-08-24",
+         "tags" : "",
+         "title" : "Branch Executive Committee"
+      },
+      {
+         "category" : "Event",
+         "endDate" : "2026-08-29",
+         "id" : "RM-204",
+         "months" : 1,
+         "startDate" : "2026-08-27",
+         "tags" : "",
+         "title" : "National Youth Program Team face-to-face meeting (Achievement Pathways Improvements (2026))"
+      },
+      {
+         "category" : "Youth Program Event",
+         "endDate" : "2026-08-28",
+         "id" : "RM-205",
+         "months" : 1,
+         "startDate" : "2026-08-28",
+         "tags" : "",
+         "title" : "Awards Ceremony (Saturday afternoon)"
+      },
+      {
+         "category" : "Youth Program Event",
+         "endDate" : "2026-08-29",
+         "id" : "RM-206",
+         "months" : 1,
+         "startDate" : "2026-08-29",
+         "tags" : "",
+         "title" : "Awards Ceremony (Sunday morning)"
+      },
+      {
+         "category" : "Prep",
+         "endDate" : "2026-09-29",
+         "id" : "RM-207",
+         "months" : 2,
+         "startDate" : "2026-08-31",
+         "tags" : "",
+         "title" : "Launch in time for Term 4 (Achievement Pathways Improvements (2026))"
+      },
+      {
+         "category" : "Comms",
+         "endDate" : "2026-09-14",
+         "id" : "RM-208",
+         "months" : 2,
+         "startDate" : "2026-08-31",
+         "tags" : "",
+         "title" : "Social media promotion for Program Pulse, encouraging Units to complete towards the end of Term 3 (Achievement Pathways Improvements (2026))"
+      },
+      {
+         "category" : "Youth Program Event",
+         "endDate" : "2026-09-02",
+         "id" : "RM-209",
+         "months" : 1,
+         "startDate" : "2026-09-02",
+         "tags" : "",
+         "title" : "Australian National Flag Day"
+      },
+      {
+         "category" : "Youth Program Event",
+         "endDate" : "2026-09-05",
+         "id" : "RM-210",
+         "months" : 1,
+         "startDate" : "2026-09-03",
+         "tags" : "",
+         "title" : "Region Activity Weekend (RAW)"
+      },
+      {
+         "category" : "Youth Program Event",
+         "endDate" : "2026-09-04",
+         "id" : "RM-211",
+         "months" : 1,
+         "startDate" : "2026-09-04",
+         "tags" : "",
+         "title" : "Skillorama"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-10-04",
+         "id" : "RM-212",
+         "months" : 2,
+         "startDate" : "2026-09-04",
+         "tags" : "Training - AA",
+         "title" : "Vertical - Abseiling Natural TP (Wide Bay)"
+      },
+      {
+         "category" : "Youth Program Event",
+         "endDate" : "2026-09-05",
+         "id" : "RM-213",
+         "months" : 1,
+         "startDate" : "2026-09-05",
+         "tags" : "",
+         "title" : "Skillorama"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-11-09",
+         "id" : "RM-215",
+         "months" : 3,
+         "startDate" : "2026-09-09",
+         "tags" : "",
+         "title" : "Scouting Essentials (FNQ)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-11-09",
+         "id" : "RM-217",
+         "months" : 3,
+         "startDate" : "2026-09-09",
+         "tags" : "Training - AA",
+         "title" : "Scouting Essentials (FNQ)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-11-09",
+         "id" : "RM-214",
+         "months" : 3,
+         "startDate" : "2026-09-09",
+         "tags" : "Training - AA",
+         "title" : "Scouting Leadership (Emerald)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-11-09",
+         "id" : "RM-216",
+         "months" : 3,
+         "startDate" : "2026-09-09",
+         "tags" : "",
+         "title" : "Scouting Leadership (Emerald)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-09-11",
+         "id" : "RM-218",
+         "months" : 1,
+         "startDate" : "2026-09-11",
+         "tags" : "Training - AA",
+         "title" : "Cycling - Off Road - SP/TP (Brisbane)"
+      },
+      {
+         "category" : "Youth Program Event",
+         "endDate" : "2026-09-15",
+         "id" : "RM-219",
+         "months" : 1,
+         "startDate" : "2026-09-15",
+         "tags" : "",
+         "title" : "Branch Youth Venturer Scout Council"
+      },
+      {
+         "category" : "Youth Program Event",
+         "endDate" : "2026-09-16",
+         "id" : "RM-220",
+         "months" : 1,
+         "startDate" : "2026-09-16",
+         "tags" : "",
+         "title" : "Branch Cub Scout Section Team Meeting"
+      },
+      {
+         "category" : "Prep",
+         "endDate" : "2026-09-17",
+         "id" : "RM-221",
+         "months" : 1,
+         "startDate" : "2026-09-17",
+         "tags" : "",
+         "title" : "Migration of existing resources on pr.scouts.com.au to Zoho knowledge base complete (Achievement Pathways Improvements (2026))"
+      },
+      {
+         "category" : "Youth Program Event",
+         "endDate" : "2026-09-24",
+         "id" : "RM-222",
+         "months" : 1,
+         "startDate" : "2026-09-18",
+         "tags" : "",
+         "title" : "Agoonoree"
+      },
+      {
+         "category" : "Youth Program Event",
+         "endDate" : "2026-09-19",
+         "id" : "RM-223",
+         "months" : 1,
+         "startDate" : "2026-09-19",
+         "tags" : "",
+         "title" : "Queensland Branch Rover Council Meeting"
+      },
+      {
+         "category" : "Reference",
+         "endDate" : "2026-10-05",
+         "id" : "RM-224",
+         "months" : 2,
+         "startDate" : "2026-09-19",
+         "tags" : "",
+         "title" : "School Holidays (September)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-09-20",
+         "id" : "RM-225",
+         "months" : 1,
+         "startDate" : "2026-09-20",
+         "tags" : "",
+         "title" : "Branch Finance Committee"
+      },
+      {
+         "category" : "Prep",
+         "endDate" : "2026-09-20",
+         "id" : "RM-226",
+         "months" : 1,
+         "startDate" : "2026-09-20",
+         "tags" : "",
+         "title" : "Training modules for flexible volunteering trial updated to reflect Achievement Pathways changes (Achievement Pathways Improvements (2026))"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-09-21",
+         "id" : "RM-227",
+         "months" : 1,
+         "startDate" : "2026-09-21",
+         "tags" : "",
+         "title" : "Branch Executive Committee"
+      },
+      {
+         "category" : "Comms",
+         "endDate" : "2026-09-22",
+         "id" : "RM-230",
+         "months" : 1,
+         "startDate" : "2026-09-22",
+         "tags" : "",
+         "title" : "Announcement video posted on social media (ask Branches to share the post) (Achievement Pathways Improvements (2026))"
+      },
+      {
+         "category" : "Comms",
+         "endDate" : "2026-09-22",
+         "id" : "RM-229",
+         "months" : 1,
+         "startDate" : "2026-09-22",
+         "tags" : "",
+         "title" : "EDM with announcement of improvements and information for webinars (Achievement Pathways Improvements (2026))"
+      },
+      {
+         "category" : "Prep",
+         "endDate" : "2026-09-22",
+         "id" : "RM-228",
+         "months" : 1,
+         "startDate" : "2026-09-22",
+         "tags" : "",
+         "title" : "Zoho knowledge base launched / pr.scouts.com.au retired and redirecting to Zoho (Achievement Pathways Improvements (2026))"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-09-26",
+         "id" : "RM-231",
+         "months" : 1,
+         "startDate" : "2026-09-24",
+         "tags" : "",
+         "title" : "Amateur Radio Foundation Licensing Course"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-10-02",
+         "id" : "RM-232",
+         "months" : 2,
+         "startDate" : "2026-09-26",
+         "tags" : "Training - AA",
+         "title" : "Paddling - Sea Kayaking School (Yeppoon)"
+      },
+      {
+         "category" : "Comms",
+         "endDate" : "2026-09-29",
+         "id" : "RM-233",
+         "months" : 1,
+         "startDate" : "2026-09-29",
+         "tags" : "",
+         "title" : "National News article with further info about improvements and webinars (Achievement Pathways Improvements (2026))"
+      },
+      {
+         "category" : "Event",
+         "endDate" : "2026-10-15",
+         "id" : "RM-235",
+         "months" : 2,
+         "startDate" : "2026-09-30",
+         "tags" : "",
+         "title" : "Achievement Pathways webinars for Youth Program Leaders and Unit Councils (4 webinars + publish recording afterwards) (Achievement Pathways Improvements (2026))"
+      },
+      {
+         "category" : "Comms",
+         "endDate" : "2026-10-29",
+         "id" : "RM-234",
+         "months" : 2,
+         "startDate" : "2026-09-30",
+         "tags" : "",
+         "title" : "Social media campaign to support awareness of improvements and webinars (Achievement Pathways Improvements (2026))"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-10-03",
+         "id" : "RM-236",
+         "months" : 1,
+         "startDate" : "2026-10-01",
+         "tags" : "Training - AA",
+         "title" : "Scouting Adventure (Brisbane)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-10-03",
+         "id" : "RM-237",
+         "months" : 1,
+         "startDate" : "2026-10-01",
+         "tags" : "Training - AA",
+         "title" : "Scouting Essentials (Brisbane)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-12-03",
+         "id" : "RM-238",
+         "months" : 3,
+         "startDate" : "2026-10-03",
+         "tags" : "Training - AA",
+         "title" : "Scouting Essentials (Bundaberg)"
+      },
+      {
+         "category" : "Youth Program Event",
+         "endDate" : "2026-10-04",
+         "id" : "RM-240",
+         "months" : 1,
+         "startDate" : "2026-10-04",
+         "tags" : "",
+         "title" : "King's Birthday Public Holiday"
+      },
+      {
+         "category" : "Event",
+         "endDate" : "2026-10-04",
+         "id" : "RM-239",
+         "months" : 1,
+         "startDate" : "2026-10-04",
+         "tags" : "",
+         "title" : "Term 4 begins in all states/territories (Achievement Pathways Improvements (2026))"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-12-06",
+         "id" : "RM-241",
+         "months" : 3,
+         "startDate" : "2026-10-06",
+         "tags" : "Training - AA",
+         "title" : "Scouting Adventure (Brisbane)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-12-06",
+         "id" : "RM-244",
+         "months" : 3,
+         "startDate" : "2026-10-06",
+         "tags" : "",
+         "title" : "Scouting Adventure (Brisbane)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-12-06",
+         "id" : "RM-242",
+         "months" : 3,
+         "startDate" : "2026-10-06",
+         "tags" : "Training - AA",
+         "title" : "Scouting Essentials (Brisbane)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-12-06",
+         "id" : "RM-243",
+         "months" : 3,
+         "startDate" : "2026-10-06",
+         "tags" : "",
+         "title" : "Scouting Essentials (Brisbane)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-10-28",
+         "id" : "RM-245",
+         "months" : 1,
+         "startDate" : "2026-10-07",
+         "tags" : "Training - AA",
+         "title" : "Scouting Management - Commissioners and Advisors (Online)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-10-10",
+         "id" : "RM-246",
+         "months" : 1,
+         "startDate" : "2026-10-08",
+         "tags" : "Training - AA",
+         "title" : "Scouting Essentials (FNQ)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-10-10",
+         "id" : "RM-247",
+         "months" : 1,
+         "startDate" : "2026-10-08",
+         "tags" : "Training - AA",
+         "title" : "Scouting Leadership (Emerald)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-10-10",
+         "id" : "RM-248",
+         "months" : 1,
+         "startDate" : "2026-10-09",
+         "tags" : "Training - AA",
+         "title" : "Archery - SP/TP/G"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-11-09",
+         "id" : "RM-249",
+         "months" : 2,
+         "startDate" : "2026-10-09",
+         "tags" : "Training - AA",
+         "title" : "Archery - SP/TP/G"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-11-09",
+         "id" : "RM-250",
+         "months" : 2,
+         "startDate" : "2026-10-09",
+         "tags" : "",
+         "title" : "Archery - SP/TP/G"
+      },
+      {
+         "category" : "Youth Program Event",
+         "endDate" : "2026-10-14",
+         "id" : "RM-251",
+         "months" : 1,
+         "startDate" : "2026-10-14",
+         "tags" : "",
+         "title" : "Branch Cub Scout Section Team Meeting"
+      },
+      {
+         "category" : "Youth Program Event",
+         "endDate" : "2026-10-17",
+         "id" : "RM-252",
+         "months" : 1,
+         "startDate" : "2026-10-15",
+         "tags" : "",
+         "title" : "JOTA/JOTI"
+      },
+      {
+         "category" : "Youth Program Event",
+         "endDate" : "2026-10-17",
+         "id" : "RM-254",
+         "months" : 1,
+         "startDate" : "2026-10-16",
+         "tags" : "",
+         "title" : "JOTA/JOTI Activity Camp - BP Park"
+      },
+      {
+         "category" : "Youth Program Event",
+         "endDate" : "2026-10-17",
+         "id" : "RM-253",
+         "months" : 1,
+         "startDate" : "2026-10-16",
+         "tags" : "",
+         "title" : "JOTA/JOTI Activity Camp - Murrenbong"
+      },
+      {
+         "category" : "Youth Program Event",
+         "endDate" : "2026-10-17",
+         "id" : "RM-255",
+         "months" : 1,
+         "startDate" : "2026-10-17",
+         "tags" : "Rover Scouts",
+         "title" : "Queensland Branch Rover Council Meeting"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-10-18",
+         "id" : "RM-257",
+         "months" : 1,
+         "startDate" : "2026-10-18",
+         "tags" : "",
+         "title" : "Branch Finance Committee"
+      },
+      {
+         "category" : "Youth Program Event",
+         "endDate" : "2026-10-18",
+         "id" : "RM-256",
+         "months" : 1,
+         "startDate" : "2026-10-18",
+         "tags" : "",
+         "title" : "Branch Scout Section Council"
+      },
+      {
+         "category" : "Youth Program Event",
+         "endDate" : "2026-10-20",
+         "id" : "RM-258",
+         "months" : 1,
+         "startDate" : "2026-10-20",
+         "tags" : "Joey Scouts",
+         "title" : "Branch Joey Scout Council"
+      },
+      {
+         "category" : "Youth Program Event",
+         "endDate" : "2026-10-20",
+         "id" : "RM-259",
+         "months" : 1,
+         "startDate" : "2026-10-20",
+         "tags" : "",
+         "title" : "Branch Youth Venturer Scout Council"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-10-24",
+         "id" : "RM-260",
+         "months" : 1,
+         "startDate" : "2026-10-22",
+         "tags" : "Training - AA",
+         "title" : "Scouting Adventure (Rockhampton)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-10-24",
+         "id" : "RM-261",
+         "months" : 1,
+         "startDate" : "2026-10-23",
+         "tags" : "Training - AA",
+         "title" : "Vertical - Abseiling Natural Surfaces - TP (FNR)"
+      },
+      {
+         "category" : "Youth Program Event",
+         "endDate" : "2026-10-25",
+         "id" : "RM-262",
+         "months" : 1,
+         "startDate" : "2026-10-24",
+         "tags" : "",
+         "title" : "ScoutOut"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-10-26",
+         "id" : "RM-263",
+         "months" : 1,
+         "startDate" : "2026-10-26",
+         "tags" : "",
+         "title" : "Branch Executive Committee"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-10-31",
+         "id" : "RM-264",
+         "months" : 1,
+         "startDate" : "2026-10-29",
+         "tags" : "Training - AA",
+         "title" : "Guiding Adventure Course"
+      },
+      {
+         "category" : "Comms",
+         "endDate" : "2026-10-29",
+         "id" : "RM-266",
+         "months" : 1,
+         "startDate" : "2026-10-29",
+         "tags" : "",
+         "title" : "National News article about new program resources site (Achievement Pathways Improvements (2026))"
+      },
+      {
+         "category" : "Youth Program Event",
+         "endDate" : "2026-10-31",
+         "id" : "RM-265",
+         "months" : 1,
+         "startDate" : "2026-10-29",
+         "tags" : "Training - AA",
+         "title" : "Scouting Leadership (FNQ)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-10-31",
+         "id" : "RM-267",
+         "months" : 1,
+         "startDate" : "2026-10-30",
+         "tags" : "Training - AA",
+         "title" : "Snorkelling - SP/Guide (Sunshine Coast)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-11-02",
+         "id" : "RM-268",
+         "months" : 1,
+         "startDate" : "2026-11-02",
+         "tags" : "Training - AA",
+         "title" : "Scouting Management - Group Leaders (Online)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-11-03",
+         "id" : "RM-269",
+         "months" : 1,
+         "startDate" : "2026-11-03",
+         "tags" : "Training - AA",
+         "title" : "Scouting Leadership (Online)"
+      },
+      {
+         "category" : "Youth Program Event",
+         "endDate" : "2026-11-06",
+         "id" : "RM-270",
+         "months" : 1,
+         "startDate" : "2026-11-06",
+         "tags" : "",
+         "title" : "Region Commissioners Conference"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-11-07",
+         "id" : "RM-271",
+         "months" : 1,
+         "startDate" : "2026-11-07",
+         "tags" : "Training - AA",
+         "title" : "Basic Water Rescue (Wide Bay)"
+      },
+      {
+         "category" : "Youth Program Event",
+         "endDate" : "2026-11-10",
+         "id" : "RM-272",
+         "months" : 1,
+         "startDate" : "2026-11-10",
+         "tags" : "",
+         "title" : "Remembrance Day"
+      },
+      {
+         "category" : "Youth Program Event",
+         "endDate" : "2026-11-14",
+         "id" : "RM-274",
+         "months" : 1,
+         "startDate" : "2026-11-12",
+         "tags" : "",
+         "title" : "Region Activity Weekend (RAW)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-11-14",
+         "id" : "RM-275",
+         "months" : 1,
+         "startDate" : "2026-11-12",
+         "tags" : "Training - AA",
+         "title" : "Scouting Adventure (Brisbane)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-11-14",
+         "id" : "RM-276",
+         "months" : 1,
+         "startDate" : "2026-11-12",
+         "tags" : "Training - AA",
+         "title" : "Scouting Leadership (Brisbane)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-11-14",
+         "id" : "RM-273",
+         "months" : 1,
+         "startDate" : "2026-11-12",
+         "tags" : "Training - AA",
+         "title" : "Scouting Leadership (Bundaberg)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-11-13",
+         "id" : "RM-277",
+         "months" : 1,
+         "startDate" : "2026-11-13",
+         "tags" : "Training - AA",
+         "title" : "Basic Water Rescue (FNQ)"
+      },
+      {
+         "category" : "Youth Program Event",
+         "endDate" : "2026-11-14",
+         "id" : "RM-278",
+         "months" : 1,
+         "startDate" : "2026-11-14",
+         "tags" : "Rover Scouts",
+         "title" : "Queensland Branch Rover Council Meeting"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-11-15",
+         "id" : "RM-279",
+         "months" : 1,
+         "startDate" : "2026-11-15",
+         "tags" : "",
+         "title" : "Branch Finance Committee"
+      },
+      {
+         "category" : "Youth Program Event",
+         "endDate" : "2026-11-15",
+         "id" : "RM-280",
+         "months" : 1,
+         "startDate" : "2026-11-15",
+         "tags" : "",
+         "title" : "Branch Scout Section Council"
+      },
+      {
+         "category" : "Youth Program Event",
+         "endDate" : "2026-11-17",
+         "id" : "RM-282",
+         "months" : 1,
+         "startDate" : "2026-11-17",
+         "tags" : "Joey Scouts",
+         "title" : "Branch Joey Scout Council"
+      },
+      {
+         "category" : "Youth Program Event",
+         "endDate" : "2026-11-17",
+         "id" : "RM-281",
+         "months" : 1,
+         "startDate" : "2026-11-17",
+         "tags" : "",
+         "title" : "Branch Youth Venturer Scout Council"
+      },
+      {
+         "category" : "Youth Program Event",
+         "endDate" : "2026-11-18",
+         "id" : "RM-283",
+         "months" : 1,
+         "startDate" : "2026-11-18",
+         "tags" : "",
+         "title" : "Branch Cub Scout Section Team Meeting"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-11-21",
+         "id" : "RM-284",
+         "months" : 1,
+         "startDate" : "2026-11-19",
+         "tags" : "Training - AA",
+         "title" : "Scouting Adventure (Brisbane)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-11-21",
+         "id" : "RM-286",
+         "months" : 1,
+         "startDate" : "2026-11-19",
+         "tags" : "Training - AA",
+         "title" : "Scouting Adventure (FNQ)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-11-21",
+         "id" : "RM-287",
+         "months" : 1,
+         "startDate" : "2026-11-19",
+         "tags" : "Training - AA",
+         "title" : "Scouting Essentials (Brisbane)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-11-21",
+         "id" : "RM-285",
+         "months" : 1,
+         "startDate" : "2026-11-19",
+         "tags" : "Training - AA",
+         "title" : "Scouting Management - Group Leaders (Brisbane)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-11-21",
+         "id" : "RM-288",
+         "months" : 1,
+         "startDate" : "2026-11-20",
+         "tags" : "Training - AA",
+         "title" : "Vertical - Abseiling Vertical Rescue (FNQ)"
+      },
+      {
+         "category" : "Youth Program Event",
+         "endDate" : "2026-11-21",
+         "id" : "RM-289",
+         "months" : 1,
+         "startDate" : "2026-11-21",
+         "tags" : "",
+         "title" : "Branch Joey Scout Council End of Year"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-11-23",
+         "id" : "RM-290",
+         "months" : 1,
+         "startDate" : "2026-11-23",
+         "tags" : "",
+         "title" : "Branch Executive Committee"
+      },
+      {
+         "category" : "Prep",
+         "endDate" : "2027-01-31",
+         "id" : "RM-291",
+         "months" : 2,
+         "startDate" : "2026-12-01",
+         "tags" : "",
+         "title" : "QARM applications period"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-12-05",
+         "id" : "RM-293",
+         "months" : 1,
+         "startDate" : "2026-12-05",
+         "tags" : "Training - AA",
+         "title" : "Scouting Adventure (Brisbane)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-12-05",
+         "id" : "RM-292",
+         "months" : 1,
+         "startDate" : "2026-12-05",
+         "tags" : "Training - AA",
+         "title" : "Scouting Leadership (Brisbane)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-12-08",
+         "id" : "RM-294",
+         "months" : 1,
+         "startDate" : "2026-12-08",
+         "tags" : "",
+         "title" : "Cycling - Off Road - SP/TP (Brisbane)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-12-08",
+         "id" : "RM-295",
+         "months" : 1,
+         "startDate" : "2026-12-08",
+         "tags" : "Training - AA",
+         "title" : "Cycling - Off Road - SP/TP (Brisbane)"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-12-11",
+         "id" : "RM-296",
+         "months" : 1,
+         "startDate" : "2026-12-11",
+         "tags" : "",
+         "title" : "Branch Executive Committee"
+      },
+      {
+         "category" : "Reference",
+         "endDate" : "2027-01-26",
+         "id" : "RM-297",
+         "months" : 2,
+         "startDate" : "2026-12-12",
+         "tags" : "",
+         "title" : "School Holidays (December)"
+      },
+      {
+         "category" : "Youth Program Event",
+         "endDate" : "2026-12-19",
+         "id" : "RM-298",
+         "months" : 1,
+         "startDate" : "2026-12-19",
+         "tags" : "Rover Scouts",
+         "title" : "Queensland Branch Rover Council Meeting"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-12-20",
+         "id" : "RM-299",
+         "months" : 1,
+         "startDate" : "2026-12-20",
+         "tags" : "",
+         "title" : "Branch Finance Committee"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-12-24",
+         "id" : "RM-300",
+         "months" : 1,
+         "startDate" : "2026-12-24",
+         "tags" : "",
+         "title" : "Christmas Day"
+      },
+      {
+         "category" : "Branch Calendar Event",
+         "endDate" : "2026-12-25",
+         "id" : "RM-301",
+         "months" : 1,
+         "startDate" : "2026-12-25",
+         "tags" : "",
+         "title" : "Boxing Day"
+      },
+      {
+         "category" : "Event",
+         "endDate" : "2027-01-29",
+         "id" : "RM-302",
+         "months" : 2,
+         "startDate" : "2026-12-31",
+         "tags" : "",
+         "title" : "Scouts | Terrain ready (Achievement Pathways Improvements (2026))"
+      },
+      {
+         "category" : "Youth Program Event",
+         "endDate" : "2027-01-01",
+         "id" : "RM-303",
+         "months" : 1,
+         "startDate" : "2027-01-01",
+         "tags" : "",
+         "title" : "Cub Scouts - Personal Development Course"
+      },
+      {
+         "category" : "Youth Program Event",
+         "endDate" : "2027-01-01",
+         "id" : "RM-306",
+         "months" : 1,
+         "startDate" : "2027-01-01",
+         "tags" : "",
+         "title" : "Joey Scouts - Personal Development Course."
+      },
+      {
+         "category" : "Queensland Public Holiday",
+         "endDate" : "2027-01-01",
+         "id" : "RM-313",
+         "months" : 1,
+         "startDate" : "2027-01-01",
+         "tags" : "Calendar Reference",
+         "title" : "New Year's Day"
+      },
+      {
+         "category" : "Prep",
+         "endDate" : "2027-02-28",
+         "id" : "RM-304",
+         "months" : 2,
+         "startDate" : "2027-01-01",
+         "tags" : "",
+         "title" : "QMoot applications period"
+      },
+      {
+         "category" : "Youth Program Event",
+         "endDate" : "2027-01-01",
+         "id" : "RM-305",
+         "months" : 1,
+         "startDate" : "2027-01-01",
+         "tags" : "",
+         "title" : "SEQ Leadership Course"
+      },
+      {
+         "category" : "Student-Free Day",
+         "endDate" : "2027-01-21",
+         "id" : "RM-314",
+         "months" : 1,
+         "startDate" : "2027-01-21",
+         "tags" : "Calendar Reference",
+         "title" : "Professional development day"
+      },
+      {
+         "category" : "Student-Free Day",
+         "endDate" : "2027-01-22",
+         "id" : "RM-315",
+         "months" : 1,
+         "startDate" : "2027-01-22",
+         "tags" : "Calendar Reference",
+         "title" : "Professional development day"
+      },
+      {
+         "category" : "Student-Free Day",
+         "endDate" : "2027-01-25",
+         "id" : "RM-316",
+         "months" : 1,
+         "startDate" : "2027-01-25",
+         "tags" : "Calendar Reference",
+         "title" : "Professional development day"
+      },
+      {
+         "category" : "Queensland Public Holiday",
+         "endDate" : "2027-01-26",
+         "id" : "RM-317",
+         "months" : 1,
+         "startDate" : "2027-01-26",
+         "tags" : "Calendar Reference",
+         "title" : "Australia Day"
+      },
+      {
+         "category" : "School Term",
+         "endDate" : "2027-03-25",
+         "id" : "RM-318",
+         "months" : 3,
+         "startDate" : "2027-01-27",
+         "tags" : "Calendar Reference",
+         "title" : "Term 1"
+      },
+      {
+         "category" : "Youth Program Event",
+         "endDate" : "2027-02-01",
+         "id" : "RM-308",
+         "months" : 1,
+         "startDate" : "2027-02-01",
+         "tags" : "",
+         "title" : "Founders Day &amp; Swim Night"
+      },
+      {
+         "category" : "Youth Program Event",
+         "endDate" : "2027-02-01",
+         "id" : "RM-309",
+         "months" : 1,
+         "startDate" : "2027-02-01",
+         "tags" : "",
+         "title" : "Founders Day camp"
+      },
+      {
+         "category" : "Youth Program Event",
+         "endDate" : "2027-02-01",
+         "id" : "RM-307",
+         "months" : 1,
+         "startDate" : "2027-02-01",
+         "tags" : "",
+         "title" : "QARM"
+      },
+      {
+         "category" : "Prep",
+         "endDate" : "2027-02-01",
+         "id" : "RM-310",
+         "months" : 1,
+         "startDate" : "2027-02-01",
+         "tags" : "",
+         "title" : "QBRC Budget approval"
+      },
+      {
+         "category" : "Youth Program Event",
+         "endDate" : "2027-03-01",
+         "id" : "RM-312",
+         "months" : 1,
+         "startDate" : "2027-03-01",
+         "tags" : "",
+         "title" : "AA Weekends - Bushwalking, Abseiling, Canoeing (proposed)"
+      },
+      {
+         "category" : "Youth Program Event",
+         "endDate" : "2027-03-01",
+         "id" : "RM-311",
+         "months" : 1,
+         "startDate" : "2027-03-01",
+         "tags" : "",
+         "title" : "QMoot"
+      },
+      {
+         "category" : "Queensland Public Holiday",
+         "endDate" : "2027-03-26",
+         "id" : "RM-320",
+         "months" : 1,
+         "startDate" : "2027-03-26",
+         "tags" : "Calendar Reference",
+         "title" : "Good Friday"
+      },
+      {
+         "category" : "School Holidays",
+         "endDate" : "2027-04-11",
+         "id" : "RM-319",
+         "months" : 2,
+         "startDate" : "2027-03-26",
+         "tags" : "Calendar Reference",
+         "title" : "Term 1 school holidays"
+      },
+      {
+         "category" : "Queensland Public Holiday",
+         "endDate" : "2027-03-27",
+         "id" : "RM-321",
+         "months" : 1,
+         "startDate" : "2027-03-27",
+         "tags" : "Calendar Reference",
+         "title" : "The day after Good Friday"
+      },
+      {
+         "category" : "Queensland Public Holiday",
+         "endDate" : "2027-03-28",
+         "id" : "RM-322",
+         "months" : 1,
+         "startDate" : "2027-03-28",
+         "tags" : "Calendar Reference",
+         "title" : "Easter Sunday"
+      },
+      {
+         "category" : "Queensland Public Holiday",
+         "endDate" : "2027-03-29",
+         "id" : "RM-323",
+         "months" : 1,
+         "startDate" : "2027-03-29",
+         "tags" : "Calendar Reference",
+         "title" : "Easter Monday"
+      },
+      {
+         "category" : "Student-Free Day",
+         "endDate" : "2027-04-08",
+         "id" : "RM-324",
+         "months" : 1,
+         "startDate" : "2027-04-08",
+         "tags" : "Calendar Reference",
+         "title" : "Professional development day"
+      },
+      {
+         "category" : "Student-Free Day",
+         "endDate" : "2027-04-09",
+         "id" : "RM-325",
+         "months" : 1,
+         "startDate" : "2027-04-09",
+         "tags" : "Calendar Reference",
+         "title" : "Professional development day"
+      },
+      {
+         "category" : "School Term",
+         "endDate" : "2027-06-25",
+         "id" : "RM-326",
+         "months" : 3,
+         "startDate" : "2027-04-12",
+         "tags" : "Calendar Reference",
+         "title" : "Term 2"
+      },
+      {
+         "category" : "Queensland Public Holiday",
+         "endDate" : "2027-04-26",
+         "id" : "RM-327",
+         "months" : 1,
+         "startDate" : "2027-04-26",
+         "tags" : "Calendar Reference",
+         "title" : "Anzac Day holiday"
+      },
+      {
+         "category" : "Queensland Public Holiday",
+         "endDate" : "2027-05-03",
+         "id" : "RM-328",
+         "months" : 1,
+         "startDate" : "2027-05-03",
+         "tags" : "Calendar Reference",
+         "title" : "Labour Day"
+      },
+      {
+         "category" : "School Holidays",
+         "endDate" : "2027-07-11",
+         "id" : "RM-329",
+         "months" : 2,
+         "startDate" : "2027-06-26",
+         "tags" : "Calendar Reference",
+         "title" : "Term 2 school holidays"
+      },
+      {
+         "category" : "School Term",
+         "endDate" : "2027-09-17",
+         "id" : "RM-330",
+         "months" : 3,
+         "startDate" : "2027-07-12",
+         "tags" : "Calendar Reference",
+         "title" : "Term 3"
+      },
+      {
+         "category" : "Brisbane Public Holiday",
+         "endDate" : "2027-08-11",
+         "id" : "RM-331",
+         "months" : 1,
+         "startDate" : "2027-08-11",
+         "tags" : "Calendar Reference",
+         "title" : "Royal Queensland Show, Brisbane area only"
+      },
+      {
+         "category" : "Student-Free Day",
+         "endDate" : "2027-09-03",
+         "id" : "RM-332",
+         "months" : 1,
+         "startDate" : "2027-09-03",
+         "tags" : "Calendar Reference",
+         "title" : "Professional development day"
+      },
+      {
+         "category" : "School Holidays",
+         "endDate" : "2027-10-04",
+         "id" : "RM-333",
+         "months" : 2,
+         "startDate" : "2027-09-18",
+         "tags" : "Calendar Reference",
+         "title" : "Term 3 school holidays"
+      },
+      {
+         "category" : "Queensland Public Holiday",
+         "endDate" : "2027-10-04",
+         "id" : "RM-334",
+         "months" : 1,
+         "startDate" : "2027-10-04",
+         "tags" : "Calendar Reference",
+         "title" : "King's Birthday"
+      },
+      {
+         "category" : "School Term",
+         "endDate" : "2027-12-10",
+         "id" : "RM-335",
+         "months" : 3,
+         "startDate" : "2027-10-05",
+         "tags" : "Calendar Reference",
+         "title" : "Term 4"
+      },
+      {
+         "category" : "School Holidays",
+         "endDate" : "2028-01-23",
+         "id" : "RM-336",
+         "months" : 2,
+         "startDate" : "2027-12-11",
+         "tags" : "Calendar Reference",
+         "title" : "Term 4 school holidays"
+      },
+      {
+         "category" : "Queensland Public Holiday",
+         "endDate" : "2027-12-24",
+         "id" : "RM-337",
+         "months" : 1,
+         "startDate" : "2027-12-24",
+         "tags" : "Calendar Reference",
+         "title" : "Christmas Eve, 6 pm to midnight"
+      },
+      {
+         "category" : "Queensland Public Holiday",
+         "endDate" : "2027-12-25",
+         "id" : "RM-338",
+         "months" : 1,
+         "startDate" : "2027-12-25",
+         "tags" : "Calendar Reference",
+         "title" : "Christmas Day"
+      },
+      {
+         "category" : "Queensland Public Holiday",
+         "endDate" : "2027-12-26",
+         "id" : "RM-339",
+         "months" : 1,
+         "startDate" : "2027-12-26",
+         "tags" : "Calendar Reference",
+         "title" : "Boxing Day"
+      },
+      {
+         "category" : "Queensland Public Holiday",
+         "endDate" : "2027-12-27",
+         "id" : "RM-340",
+         "months" : 1,
+         "startDate" : "2027-12-27",
+         "tags" : "Calendar Reference",
+         "title" : "Christmas Day holiday"
+      },
+      {
+         "category" : "Queensland Public Holiday",
+         "endDate" : "2027-12-28",
+         "id" : "RM-341",
+         "months" : 1,
+         "startDate" : "2027-12-28",
+         "tags" : "Calendar Reference",
+         "title" : "Boxing Day holiday"
+      }
+   ]
+}
+;
