@@ -1,0 +1,198 @@
+/* ==========================================================================
+   Scouts Queensland - Print & Multi-page PDF Stylesheet
+   Optimized for A4 Landscape Printable Export
+   ========================================================================== */
+
+@media print {
+  @page {
+    size: A4 landscape;
+    margin: 8mm 6mm 10mm 6mm;
+  }
+
+  *, *::before, *::after {
+    box-shadow: none !important;
+    text-shadow: none !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-size: 7.5pt !important;
+    line-height: 1.2 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Hide interactive controls and header buttons */
+  .no-print,
+  .app-header,
+  .toolbar-container,
+  .row-actions,
+  .sticky-col-actions,
+  dialog,
+  button {
+    display: none !important;
+  }
+
+  /* Show dedicated print header */
+  .print-only-header {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2pt solid #681d34;
+    padding-bottom: 4mm;
+    margin-bottom: 4mm;
+  }
+
+  .print-only-header .print-logo {
+    height: 36px;
+    width: auto;
+  }
+
+  .print-only-header .print-title {
+    text-align: right;
+  }
+
+  .print-only-header h2 {
+    font-size: 13pt;
+    font-weight: 900;
+    color: #681d34;
+    margin: 0;
+  }
+
+  .print-only-header p {
+    font-size: 7.5pt;
+    color: #555555;
+    margin: 2px 0 0 0;
+  }
+
+  /* Container adjustments */
+  .main-content {
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: visible !important;
+  }
+
+  .planner-card {
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    overflow: visible !important;
+  }
+
+  .table-scroll-wrapper {
+    overflow: visible !important;
+    max-height: none !important;
+  }
+
+  /* Table styling for print */
+  .timeline-table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    font-size: 6.8pt !important;
+    page-break-inside: auto;
+  }
+
+  .timeline-table thead {
+    display: table-header-group !important;
+  }
+
+  .timeline-table thead th {
+    background-color: #f1f5f9 !important;
+    color: #1e293b !important;
+    border: 0.5pt solid #cbd5e1 !important;
+    padding: 2pt 3pt !important;
+    font-weight: 800 !important;
+  }
+
+  .timeline-table tr {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  .timeline-table td {
+    border: 0.5pt solid #e2e8f0 !important;
+    padding: 1.5pt 2.5pt !important;
+  }
+
+  /* Unstick columns for print layout */
+  .sticky-col-idx,
+  .sticky-col-title,
+  .sticky-col-dates,
+  .sticky-col-owner,
+  .sticky-col-actions {
+    position: static !important;
+    box-shadow: none !important;
+    background: transparent !important;
+  }
+
+  .sticky-col-title {
+    max-width: 200pt !important;
+    font-size: 7pt !important;
+  }
+
+  .sticky-col-dates,
+  .sticky-col-owner {
+    font-size: 6.5pt !important;
+  }
+
+  .timeline-cell,
+  .week-cell {
+    padding: 0 !important;
+  }
+
+  .timeline-bar {
+    height: 11pt !important;
+    font-size: 5.5pt !important;
+    margin: 0 !important;
+    border-radius: 1.5pt !important;
+    border: 0.5pt solid rgba(0,0,0,0.15) !important;
+  }
+
+  .badge {
+    padding: 1pt 3pt !important;
+    font-size: 6pt !important;
+  }
+
+  /* Print Legend */
+  .legend-bar {
+    display: flex !important;
+    background: transparent !important;
+    border: none !important;
+    padding: 2mm 0 !important;
+    font-size: 6.8pt !important;
+    page-break-after: avoid !important;
+    break-after: avoid !important;
+  }
+
+  /* Page breaks */
+  .page-break-after {
+    page-break-after: always !important;
+    break-after: page !important;
+  }
+
+  /* Print Footer */
+  .print-footer {
+    display: block !important;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 6.5pt;
+    color: #777777;
+    text-align: center;
+    border-top: 0.5pt solid #cccccc;
+    padding-top: 2mm;
+  }
+}
+
+/* Hide print elements on screen */
+@media screen {
+  .print-only-header,
+  .print-footer {
+    display: none;
+  }
+}
