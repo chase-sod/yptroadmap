@@ -3,7 +3,7 @@
  * Plugin Name: Scouts QLD - Youth Program Team Roadmap
  * Plugin URI: https://github.com/chase-sod/yptroadmap
  * Description: Interactive, responsive multi-view roadmap and planner for Scouts Queensland Youth Program Team with real-time WordPress database persistence.
- * Version: 1.0.1
+ * Version: 1.0.2
  * Author: Scouts Queensland Youth Program Team
  * Author URI: https://scoutsqld.com.au
  * License: GPL-2.0+
@@ -14,7 +14,7 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-define('SCOUTS_YPT_VERSION', '1.0.1');
+define('SCOUTS_YPT_VERSION', '1.0.2');
 define('SCOUTS_YPT_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('SCOUTS_YPT_PLUGIN_URL', plugin_dir_url(__FILE__));
 

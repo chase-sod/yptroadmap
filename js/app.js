@@ -24,7 +24,8 @@ document.addEventListener('DOMContentLoaded', () => {
   ];
 
   const app = {
-    currentView: (typeof window !== 'undefined' && new URLSearchParams(window.location.search).get('view')) || 'monthly',
+    currentView: (typeof window !== 'undefined' && new URLSearchParams(window.location.search).get('view')) ||
+      ((typeof window !== 'undefined' && window.innerWidth <= 768) ? 'agenda' : 'monthly'),
     yearFilter: 'all',      // 'all' | '2026' | '2027' | '2028'
     pastFilter: 'all',     // 'all' | 'hide' | 'only'
     selectedCategories: null, // Set of active categories
@@ -34,11 +35,18 @@ document.addEventListener('DOMContentLoaded', () => {
     sortAsc: true,
     editingItemId: null,
     previousMonthlyYear: null,
+    _lastIsMobile: false,
 
     // Temporary working state for Category Management Modal
     tempCategories: {},
 
+    isMobile() {
+      return typeof window !== 'undefined' && window.innerWidth <= 768;
+    },
+
     init() {
+      this._lastIsMobile = this.isMobile();
+
       // Initialize blockouts visibility from storage preference
       if (typeof window !== 'undefined' && window.storageManager) {
         this.blockoutsVisible = window.storageManager.isBlockoutsVisible();
@@ -61,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
           this.yearFilter = urlYear;
         }
         const urlView = urlParams.get('view');
-        if (urlView && ['monthly', 'weekly'].includes(urlView)) {
+        if (urlView && ['monthly', 'weekly', 'agenda'].includes(urlView)) {
           this.currentView = urlView;
         }
         const urlLockouts = urlParams.get('lockouts');
@@ -225,6 +233,97 @@ document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('importCsvBtn')?.addEventListener('click', () => this.openCsvModal());
       document.getElementById('resetDataBtn')?.addEventListener('click', () => this.handleResetData());
 
+      // Mobile More Actions Dropdown Menu
+      const moreBtn = document.getElementById('mobileMoreBtn');
+      const moreMenu = document.getElementById('mobileMoreMenu');
+      if (moreBtn && moreMenu) {
+        moreBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const isHidden = moreMenu.hasAttribute('hidden');
+          if (isHidden) {
+            moreMenu.removeAttribute('hidden');
+            moreBtn.setAttribute('aria-expanded', 'true');
+          } else {
+            moreMenu.setAttribute('hidden', '');
+            moreBtn.setAttribute('aria-expanded', 'false');
+          }
+        });
+
+        // Close when clicking outside
+        document.addEventListener('click', () => {
+          if (!moreMenu.hasAttribute('hidden')) {
+            moreMenu.setAttribute('hidden', '');
+            moreBtn.setAttribute('aria-expanded', 'false');
+          }
+        });
+
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && !moreMenu.hasAttribute('hidden')) {
+            moreMenu.setAttribute('hidden', '');
+            moreBtn.setAttribute('aria-expanded', 'false');
+            moreBtn.focus();
+          }
+        });
+
+        // Delegate mobile more clicks to existing actions
+        document.getElementById('mFileSyncBtn')?.addEventListener('click', () => {
+          moreMenu.setAttribute('hidden', '');
+          document.getElementById('fileSyncBtn')?.click();
+        });
+        document.getElementById('mExportPdfBtn')?.addEventListener('click', () => {
+          moreMenu.setAttribute('hidden', '');
+          document.getElementById('exportPdfBtn')?.click();
+        });
+        document.getElementById('mExportCsvBtn')?.addEventListener('click', () => {
+          moreMenu.setAttribute('hidden', '');
+          document.getElementById('exportCsvBtn')?.click();
+        });
+        document.getElementById('mImportCsvBtn')?.addEventListener('click', () => {
+          moreMenu.setAttribute('hidden', '');
+          document.getElementById('importCsvBtn')?.click();
+        });
+        document.getElementById('mImportJsonBtn')?.addEventListener('click', () => {
+          moreMenu.setAttribute('hidden', '');
+          document.getElementById('importJsonBtn')?.click();
+        });
+        document.getElementById('mExportJsonBtn')?.addEventListener('click', () => {
+          moreMenu.setAttribute('hidden', '');
+          document.getElementById('exportJsonBtn')?.click();
+        });
+      }
+
+      // Mobile Filters Drawer Toggle
+      const filterToggleBtn = document.getElementById('mobileFilterToggleBtn');
+      const toolbarFilters = document.getElementById('toolbarFilters');
+      const closeMobileFiltersBtn = document.getElementById('closeMobileFiltersBtn');
+      if (filterToggleBtn && toolbarFilters) {
+        filterToggleBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const isOpen = toolbarFilters.classList.toggle('open');
+          filterToggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+          filterToggleBtn.classList.toggle('active', isOpen);
+        });
+
+        closeMobileFiltersBtn?.addEventListener('click', () => {
+          toolbarFilters.classList.remove('open');
+          filterToggleBtn.setAttribute('aria-expanded', 'false');
+          filterToggleBtn.classList.remove('active');
+        });
+      }
+
+      // Responsive Resize Listener to adapt table without unnecessary overhead
+      let resizeTimer = null;
+      window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+          const isMob = this.isMobile();
+          if (this._lastIsMobile !== isMob) {
+            this._lastIsMobile = isMob;
+            this.render();
+          }
+        }, 150);
+      });
+
       // Modal Dialog Events
       this.bindModalEvents();
       this.bindCategoryModalEvents();
@@ -317,7 +416,7 @@ document.addEventListener('DOMContentLoaded', () => {
         this.yearFilter = '2027';
         this.previousMonthlyYear = 'all';
         if (yearSelect) yearSelect.value = '2027';
-      } else if (view === 'monthly' && this.previousMonthlyYear === 'all' && this.yearFilter === '2027') {
+      } else if ((view === 'monthly' || view === 'agenda') && this.previousMonthlyYear === 'all' && this.yearFilter === '2027') {
         this.yearFilter = 'all';
         this.previousMonthlyYear = null;
         if (yearSelect) yearSelect.value = 'all';
@@ -413,6 +512,7 @@ document.addEventListener('DOMContentLoaded', () => {
     updateCategoryUI() {
       this.populateCategoryFilters();
       this.renderLegendBar();
+      this.updateFilterBadge();
     },
 
     getTodayIsoString() {
@@ -1012,7 +1112,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const printDocTitle = document.getElementById('printDocTitle');
       const items = this.getFilteredItems();
 
-      const activeYearLabel = this.yearFilter === 'all' && this.currentView === 'monthly' ? '2026–2028' : (this.yearFilter === 'all' ? '2027' : this.yearFilter);
+      const activeYearLabel = this.yearFilter === 'all' && (this.currentView === 'monthly' || this.currentView === 'agenda') ? '2026–2028' : (this.yearFilter === 'all' ? '2027' : this.yearFilter);
       let filterSuffix = '';
       if (this.pastFilter === 'hide') {
         filterSuffix = ' • Active/Upcoming';
@@ -1027,17 +1127,186 @@ document.addEventListener('DOMContentLoaded', () => {
       if (this.currentView === 'monthly') {
         if (printDocTitle) printDocTitle.textContent = `Youth Program Team Roadmap (${activeYearLabel})`;
         container.innerHTML = this.renderMonthlyTable(items);
-      } else {
+        this.bindJumpToCurrentPeriod();
+      } else if (this.currentView === 'weekly') {
         if (printDocTitle) printDocTitle.textContent = `Youth Program Team Weekly Planner (${activeYearLabel})`;
         container.innerHTML = this.renderWeeklyTable(items, activeYearLabel);
+        this.bindJumpToCurrentPeriod();
+      } else if (this.currentView === 'agenda') {
+        if (printDocTitle) printDocTitle.textContent = `Youth Program Team Agenda (${activeYearLabel})`;
+        container.innerHTML = this.renderAgendaView(items, activeYearLabel);
       }
 
       this.bindTableActionButtons();
-      this.initColumnResize();
+      if (!this.isMobile() && this.currentView !== 'agenda') {
+        this.initColumnResize();
+      }
+      this.updateFilterBadge();
+    },
+
+    updateFilterBadge() {
+      const badge = document.getElementById('mobileFilterBadge');
+      if (!badge) return;
+      let activeCount = 0;
+      if (this.yearFilter !== 'all') activeCount++;
+      if (this.pastFilter !== 'all') activeCount++;
+      if (this.searchQuery) activeCount++;
+      const allCatsCount = Object.keys(window.storageManager.getCategories()).length;
+      if (this.selectedCategories && this.selectedCategories.size < allCatsCount) activeCount++;
+
+      if (activeCount > 0) {
+        badge.textContent = activeCount;
+        badge.style.display = 'inline-block';
+      } else {
+        badge.style.display = 'none';
+      }
+    },
+
+    bindJumpToCurrentPeriod() {
+      const jumpBtn = document.getElementById('jumpToCurrentPeriodBtn');
+      const container = document.getElementById('tableContainer');
+      if (jumpBtn && container) {
+        jumpBtn.addEventListener('click', () => {
+          const target = container.querySelector('.current-month-col') || container.querySelector('.current-week-col');
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+          } else {
+            container.scrollTo({ left: 0, behavior: 'smooth' });
+          }
+        });
+      }
+    },
+
+    // --- Agenda / Card List View ---
+    renderAgendaView(items, activeYearLabel) {
+      if (items.length === 0) {
+        return `<div class="agenda-empty-state">
+          <div style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.35rem; color: var(--text-main);">No items found matching the selected filters</div>
+          <div style="font-size: 0.85rem; margin-bottom: 0.85rem; color: var(--text-muted);">Try adjusting your search query, year, category, or past entries selections.</div>
+          <div style="display: inline-flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap;">
+            <button type="button" class="btn btn-outline reset-cat-btn" style="font-size: 0.8rem; padding: 0.35rem 0.75rem;">
+              🏷️ Select All Categories
+            </button>
+            ${this.pastFilter !== 'all' ? `
+            <button type="button" class="btn btn-outline reset-past-btn" style="font-size: 0.8rem; padding: 0.35rem 0.75rem;">
+              🕒 Show All (Include Past)
+            </button>` : ''}
+          </div>
+        </div>`;
+      }
+
+      // Group items chronologically
+      const sorted = [...items].sort((a, b) => {
+        const da = a.startDate || '9999-99-99';
+        const db = b.startDate || '9999-99-99';
+        return da.localeCompare(db);
+      });
+
+      const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+      const groups = {};
+
+      sorted.forEach(item => {
+        let groupKey = 'Undated';
+        let groupLabel = 'Undated / Ongoing';
+        if (item.startDate) {
+          const parts = item.startDate.split('-');
+          if (parts.length >= 2) {
+            const y = parts[0];
+            const m = parseInt(parts[1], 10);
+            groupKey = `${y}-${String(m).padStart(2, '0')}`;
+            groupLabel = `${monthNames[m - 1]} ${y}`;
+          }
+        }
+        if (!groups[groupKey]) {
+          groups[groupKey] = { label: groupLabel, key: groupKey, items: [] };
+        }
+        groups[groupKey].items.push(item);
+      });
+
+      const now = new Date();
+      const currentMonthKey = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}`;
+
+      let html = `<div class="agenda-container">`;
+
+      for (const [key, group] of Object.entries(groups)) {
+        const isCurrent = key === currentMonthKey;
+        let lockoutBadge = '';
+        if (key !== 'Undated') {
+          const [gy, gm] = key.split('-');
+          const startOfMonth = `${gy}-${gm}-01`;
+          const endOfMonth = `${gy}-${gm}-31`;
+          const mLockouts = this.getActiveBlockoutsForPeriod(startOfMonth, endOfMonth);
+          if (mLockouts.length > 0) {
+            lockoutBadge = `<span class="agenda-lockout-pill" title="Lockout: ${mLockouts.map(b => b.title).join('; ')}">🔒 ${mLockouts[0].title}</span>`;
+          }
+        }
+
+        html += `<section class="agenda-month-section${isCurrent ? ' is-current-month' : ''}">
+          <header class="agenda-month-header">
+            <div class="agenda-month-title-wrap">
+              <h3 class="agenda-month-title">${group.label}</h3>
+              ${isCurrent ? '<span class="agenda-current-badge">Current Month</span>' : ''}
+            </div>
+            <div class="agenda-month-meta">
+              ${lockoutBadge}
+              <span class="agenda-month-count">${group.items.length} ${group.items.length === 1 ? 'item' : 'items'}</span>
+            </div>
+          </header>
+          <div class="agenda-cards-grid">`;
+
+        group.items.forEach(item => {
+          const catColor = this.getCategoryColor(item.category);
+          const textColor = this.getContrastColor(catColor);
+          const sDate = item.startDate || '';
+          const eDate = item.endDate || sDate;
+          const duration = this.getDurationDetails(sDate, eDate);
+          const sDateFormatted = this.formatDateDMY(sDate);
+          const eDateFormatted = this.formatDateDMY(eDate);
+          const dateText = sDateFormatted ? (sDateFormatted === eDateFormatted ? sDateFormatted : `${sDateFormatted} → ${eDateFormatted}`) : 'No Date';
+
+          const itemLockouts = (sDate && eDate) ? this.getActiveBlockoutsForPeriod(sDate, eDate) : [];
+          const hasItemBo = itemLockouts.length > 0;
+
+          html += `
+          <article class="agenda-card" data-id="${item.id}" style="border-left-color: ${catColor};">
+            <div class="agenda-card-top">
+              <div class="agenda-card-badges">
+                <span class="badge cat-badge" style="background-color: ${catColor}; color: ${textColor};">${item.category || 'General'}</span>
+                ${item.tags ? `<span class="tag-badge">${item.tags}</span>` : ''}
+                ${hasItemBo ? `<span class="badge badge-lockout-warning" title="${itemLockouts.map(b => b.title).join('; ')}">⚠️ Lockout</span>` : ''}
+              </div>
+              <div class="agenda-card-actions">
+                <button type="button" class="action-icon-btn edit-btn" data-id="${item.id}" title="Edit item" aria-label="Edit ${item.title}">✏️</button>
+                <button type="button" class="action-icon-btn delete-btn" data-id="${item.id}" title="Delete item" aria-label="Delete ${item.title}">🗑️</button>
+              </div>
+            </div>
+            <h4 class="agenda-card-title">${item.title}</h4>
+            <div class="agenda-card-meta">
+              <div class="agenda-meta-row">
+                <span class="agenda-meta-icon">📅</span>
+                <span class="agenda-meta-date">${dateText}</span>
+                ${duration.barLabel ? `<span class="agenda-duration-pill">${duration.barLabel}</span>` : ''}
+              </div>
+              ${item.owner ? `
+              <div class="agenda-meta-row">
+                <span class="agenda-meta-icon">👤</span>
+                <span class="agenda-meta-owner">${item.owner}</span>
+              </div>` : ''}
+            </div>
+          </article>`;
+        });
+
+        html += `</div></section>`;
+      }
+
+      html += `</div>`;
+      return html;
     },
 
     // --- Monthly Table View ---
     renderMonthlyTable(items) {
+      const isMob = this.isMobile();
+      const colMetaSpan = isMob ? 1 : 5;
       const activeMonths = this.getMonthsForTimeline();
 
       const yearSpans = {};
@@ -1049,12 +1318,17 @@ document.addEventListener('DOMContentLoaded', () => {
       const currentMonthKey = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}`;
 
       // Build Colgroup for 100% strict column width synchronization
-      let colgroup = `<colgroup>
+      let colgroup = `<colgroup>`;
+      if (isMob) {
+        colgroup += `<col style="width: var(--col-w-mobile-title, 170px);">`;
+      } else {
+        colgroup += `
         <col style="width: var(--col-w-idx);">
         <col style="width: var(--col-w-title);">
         <col style="width: var(--col-w-dates);">
         <col style="width: var(--col-w-owner);">
         <col style="width: var(--col-w-actions);">`;
+      }
       activeMonths.forEach(() => {
         colgroup += `<col style="width: var(--timeline-col-w);">`;
       });
@@ -1062,14 +1336,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Row 1: Group headers
       let headerRow1 = `<tr class="header-row-1">
-        <th class="sticky-meta-hdr" colspan="5">Roadmap Items</th>`;
+        <th class="sticky-meta-hdr${isMob ? ' mobile-sticky-meta-hdr' : ''}" colspan="${colMetaSpan}">Roadmap Items</th>`;
       for (const [year, span] of Object.entries(yearSpans)) {
         headerRow1 += `<th class="timeline-year-group-hdr" colspan="${span}">${year}</th>`;
       }
       headerRow1 += '</tr>';
 
       // Row 2: Column Headers & Months with Resizers
-      let headerRow2 = `<tr class="header-row-2">
+      let headerRow2 = `<tr class="header-row-2">`;
+      if (isMob) {
+        headerRow2 += `
+        <th class="sticky-col-title mobile-table-title-hdr" data-col="title">
+          Project / Action
+        </th>`;
+      } else {
+        headerRow2 += `
         <th class="sticky-col-idx" data-col="idx">
           #
           <div class="col-resizer" title="Drag to resize column (double-click to reset)"></div>
@@ -1090,6 +1371,7 @@ document.addEventListener('DOMContentLoaded', () => {
           Actions
           <div class="col-resizer" title="Drag to resize column (double-click to reset)"></div>
         </th>`;
+      }
 
       activeMonths.forEach(m => {
         const isCurrent = m.key === currentMonthKey ? ' current-month-col' : '';
@@ -1106,7 +1388,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Build Rows
       let rowsHtml = '';
       if (items.length === 0) {
-        rowsHtml = `<tr><td colspan="${5 + activeMonths.length}" style="text-align: center; padding: 3rem 1.5rem; color: var(--text-muted); font-size: 0.95rem;">
+        rowsHtml = `<tr><td colspan="${colMetaSpan + activeMonths.length}" style="text-align: center; padding: 3rem 1.5rem; color: var(--text-muted); font-size: 0.95rem;">
           <div style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.35rem; color: var(--text-main);">No items found matching the selected filters</div>
           <div style="font-size: 0.85rem; margin-bottom: 0.85rem;">Try adjusting your search query, year, category, or past entries selections.</div>
           <div style="display: inline-flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap;">
@@ -1190,29 +1472,56 @@ document.addEventListener('DOMContentLoaded', () => {
             }
           });
 
-          rowsHtml += `<tr>
-            <td class="sticky-col-idx">${idx + 1}</td>
-            <td class="sticky-col-title" title="${item.title}">
-              <div class="item-title-text" style="font-weight: 700;">${item.title}</div>
-              <div class="item-sub-meta">
-                <span class="badge cat-badge" style="background-color: ${catColor}; color: ${textColor};">${item.category || 'General'}</span>
-                ${item.tags ? `<span class="tag-badge">${item.tags}</span>` : ''}
-              </div>
-            </td>
-            <td class="sticky-col-dates">${dateLabel}</td>
-            <td class="sticky-col-owner" title="${item.owner || ''}">${item.owner || '<span style="color: var(--text-muted);">—</span>'}</td>
-            <td class="sticky-col-actions no-print">
-              <div class="row-actions">
-                <button class="action-icon-btn edit-btn" data-id="${item.id}" title="Edit">✏️</button>
-                <button class="action-icon-btn delete-btn" data-id="${item.id}" title="Delete">🗑️</button>
-              </div>
-            </td>
-            ${rowCells}
-          </tr>`;
+          if (isMob) {
+            rowsHtml += `<tr>
+              <td class="sticky-col-title mobile-table-title-cell" title="${item.title}">
+                <div class="item-title-text" style="font-weight: 700;">${item.title}</div>
+                <div class="item-sub-meta">
+                  <span class="badge cat-badge" style="background-color: ${catColor}; color: ${textColor};">${item.category || 'General'}</span>
+                  ${item.tags ? `<span class="tag-badge">${item.tags}</span>` : ''}
+                </div>
+                <div class="mobile-cell-meta">
+                  <div class="mobile-meta-date">📅 ${sDateFormatted}${eDateFormatted !== sDateFormatted ? ` → ${eDateFormatted}` : ''}</div>
+                  ${item.owner ? `<div class="mobile-meta-owner">👤 ${item.owner}</div>` : ''}
+                  <div class="mobile-cell-actions">
+                    <button type="button" class="action-icon-btn edit-btn" data-id="${item.id}" title="Edit">✏️ Edit</button>
+                    <button type="button" class="action-icon-btn delete-btn" data-id="${item.id}" title="Delete">🗑️</button>
+                  </div>
+                </div>
+              </td>
+              ${rowCells}
+            </tr>`;
+          } else {
+            rowsHtml += `<tr>
+              <td class="sticky-col-idx">${idx + 1}</td>
+              <td class="sticky-col-title" title="${item.title}">
+                <div class="item-title-text" style="font-weight: 700;">${item.title}</div>
+                <div class="item-sub-meta">
+                  <span class="badge cat-badge" style="background-color: ${catColor}; color: ${textColor};">${item.category || 'General'}</span>
+                  ${item.tags ? `<span class="tag-badge">${item.tags}</span>` : ''}
+                </div>
+              </td>
+              <td class="sticky-col-dates">${dateLabel}</td>
+              <td class="sticky-col-owner" title="${item.owner || ''}">${item.owner || '<span style="color: var(--text-muted);">—</span>'}</td>
+              <td class="sticky-col-actions no-print">
+                <div class="row-actions">
+                  <button class="action-icon-btn edit-btn" data-id="${item.id}" title="Edit">✏️</button>
+                  <button class="action-icon-btn delete-btn" data-id="${item.id}" title="Delete">🗑️</button>
+                </div>
+              </td>
+              ${rowCells}
+            </tr>`;
+          }
         });
       }
 
-      return `<table class="timeline-table">
+      const swipeHint = isMob ? `
+      <div class="mobile-swipe-hint no-print">
+        <span>👉 Swipe horizontally for timeline</span>
+        <button type="button" class="btn-jump-current" id="jumpToCurrentPeriodBtn">📍 Jump to Now</button>
+      </div>` : '';
+
+      return `${swipeHint}<table class="timeline-table">
         ${colgroup}
         <thead>${headerRow1}${headerRow2}</thead>
         <tbody>${rowsHtml}</tbody>
@@ -1221,15 +1530,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Weekly Table View ---
     renderWeeklyTable(items, year) {
+      const isMob = this.isMobile();
+      const colMetaSpan = isMob ? 1 : 5;
       const activeWeeks = this.getWeeksForYear(year);
 
       // Build Colgroup for 100% strict column width synchronization
-      let colgroup = `<colgroup>
+      let colgroup = `<colgroup>`;
+      if (isMob) {
+        colgroup += `<col style="width: var(--col-w-mobile-title, 170px);">`;
+      } else {
+        colgroup += `
         <col style="width: var(--col-w-idx);">
         <col style="width: var(--col-w-title);">
         <col style="width: var(--col-w-dates);">
         <col style="width: var(--col-w-owner);">
         <col style="width: var(--col-w-actions);">`;
+      }
       activeWeeks.forEach(() => {
         colgroup += `<col style="width: var(--week-col-w);">`;
       });
@@ -1237,12 +1553,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Row 1: Group headers
       let headerRow1 = `<tr class="header-row-1">
-        <th class="sticky-meta-hdr" colspan="5">Roadmap Items</th>
+        <th class="sticky-meta-hdr${isMob ? ' mobile-sticky-meta-hdr' : ''}" colspan="${colMetaSpan}">Roadmap Items</th>
         <th class="timeline-year-group-hdr" colspan="${activeWeeks.length}">${year} Weekly Schedule</th>
       </tr>`;
 
       // Row 2: Column Headers & Weeks with Resizers
-      let headerRow2 = `<tr class="header-row-2">
+      let headerRow2 = `<tr class="header-row-2">`;
+      if (isMob) {
+        headerRow2 += `
+        <th class="sticky-col-title mobile-table-title-hdr" data-col="title">
+          Project / Action
+        </th>`;
+      } else {
+        headerRow2 += `
         <th class="sticky-col-idx" data-col="idx">
           #
           <div class="col-resizer" title="Drag to resize column (double-click to reset)"></div>
@@ -1263,6 +1586,7 @@ document.addEventListener('DOMContentLoaded', () => {
           Actions
           <div class="col-resizer" title="Drag to resize column (double-click to reset)"></div>
         </th>`;
+      }
 
       activeWeeks.forEach(w => {
         const wLockouts = this.getActiveBlockoutsForPeriod(w.startDate, w.endDate);
@@ -1280,7 +1604,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       let rowsHtml = '';
       if (items.length === 0) {
-        rowsHtml = `<tr><td colspan="${5 + activeWeeks.length}" style="text-align: center; padding: 3rem 1.5rem; color: var(--text-muted); font-size: 0.95rem;">
+        rowsHtml = `<tr><td colspan="${colMetaSpan + activeWeeks.length}" style="text-align: center; padding: 3rem 1.5rem; color: var(--text-muted); font-size: 0.95rem;">
           <div style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.35rem; color: var(--text-main);">No items found for ${year} matching the selected filters</div>
           <div style="font-size: 0.85rem; margin-bottom: 0.85rem;">Try adjusting your search query, year, category, or past entries selections.</div>
           <div style="display: inline-flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap;">
@@ -1367,29 +1691,56 @@ document.addEventListener('DOMContentLoaded', () => {
             }
           });
 
-          rowsHtml += `<tr>
-            <td class="sticky-col-idx">${idx + 1}</td>
-            <td class="sticky-col-title" title="${item.title}">
-              <div class="item-title-text" style="font-weight: 700;">${item.title}</div>
-              <div class="item-sub-meta">
-                <span class="badge cat-badge" style="background-color: ${catColor}; color: ${textColor};">${item.category || 'General'}</span>
-                ${item.tags ? `<span class="tag-badge">${item.tags}</span>` : ''}
-              </div>
-            </td>
-            <td class="sticky-col-dates">${dateLabel}</td>
-            <td class="sticky-col-owner" title="${item.owner || ''}">${item.owner || '<span style="color: var(--text-muted);">—</span>'}</td>
-            <td class="sticky-col-actions no-print">
-              <div class="row-actions">
-                <button class="action-icon-btn edit-btn" data-id="${item.id}" title="Edit">✏️</button>
-                <button class="action-icon-btn delete-btn" data-id="${item.id}" title="Delete">🗑️</button>
-              </div>
-            </td>
-            ${weekCells}
-          </tr>`;
+          if (isMob) {
+            rowsHtml += `<tr>
+              <td class="sticky-col-title mobile-table-title-cell" title="${item.title}">
+                <div class="item-title-text" style="font-weight: 700;">${item.title}</div>
+                <div class="item-sub-meta">
+                  <span class="badge cat-badge" style="background-color: ${catColor}; color: ${textColor};">${item.category || 'General'}</span>
+                  ${item.tags ? `<span class="tag-badge">${item.tags}</span>` : ''}
+                </div>
+                <div class="mobile-cell-meta">
+                  <div class="mobile-meta-date">📅 ${sDateFormatted}${eDateFormatted !== sDateFormatted ? ` → ${eDateFormatted}` : ''}</div>
+                  ${item.owner ? `<div class="mobile-meta-owner">👤 ${item.owner}</div>` : ''}
+                  <div class="mobile-cell-actions">
+                    <button type="button" class="action-icon-btn edit-btn" data-id="${item.id}" title="Edit">✏️ Edit</button>
+                    <button type="button" class="action-icon-btn delete-btn" data-id="${item.id}" title="Delete">🗑️</button>
+                  </div>
+                </div>
+              </td>
+              ${weekCells}
+            </tr>`;
+          } else {
+            rowsHtml += `<tr>
+              <td class="sticky-col-idx">${idx + 1}</td>
+              <td class="sticky-col-title" title="${item.title}">
+                <div class="item-title-text" style="font-weight: 700;">${item.title}</div>
+                <div class="item-sub-meta">
+                  <span class="badge cat-badge" style="background-color: ${catColor}; color: ${textColor};">${item.category || 'General'}</span>
+                  ${item.tags ? `<span class="tag-badge">${item.tags}</span>` : ''}
+                </div>
+              </td>
+              <td class="sticky-col-dates">${dateLabel}</td>
+              <td class="sticky-col-owner" title="${item.owner || ''}">${item.owner || '<span style="color: var(--text-muted);">—</span>'}</td>
+              <td class="sticky-col-actions no-print">
+                <div class="row-actions">
+                  <button class="action-icon-btn edit-btn" data-id="${item.id}" title="Edit">✏️</button>
+                  <button class="action-icon-btn delete-btn" data-id="${item.id}" title="Delete">🗑️</button>
+                </div>
+              </td>
+              ${weekCells}
+            </tr>`;
+          }
         });
       }
 
-      return `<table class="timeline-table">
+      const swipeHint = isMob ? `
+      <div class="mobile-swipe-hint no-print">
+        <span>👉 Swipe horizontally for timeline</span>
+        <button type="button" class="btn-jump-current" id="jumpToCurrentPeriodBtn">📍 Jump to Now</button>
+      </div>` : '';
+
+      return `${swipeHint}<table class="timeline-table">
         ${colgroup}
         <thead>${headerRow1}${headerRow2}</thead>
         <tbody>${rowsHtml}</tbody>
@@ -1399,6 +1750,7 @@ document.addEventListener('DOMContentLoaded', () => {
     bindTableActionButtons() {
       document.querySelectorAll('.edit-btn').forEach(btn => {
         btn.addEventListener('click', (e) => {
+          e.stopPropagation();
           const id = e.currentTarget.dataset.id;
           this.openEditModal(id);
         });
@@ -1406,8 +1758,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
       document.querySelectorAll('.delete-btn').forEach(btn => {
         btn.addEventListener('click', (e) => {
+          e.stopPropagation();
           const id = e.currentTarget.dataset.id;
           this.handleDeleteItem(id);
+        });
+      });
+
+      document.querySelectorAll('.agenda-card').forEach(card => {
+        card.addEventListener('click', (e) => {
+          if (e.target.closest('.action-icon-btn')) return;
+          const id = card.dataset.id;
+          if (id) this.openEditModal(id);
         });
       });
 

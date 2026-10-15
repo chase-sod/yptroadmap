@@ -2,7 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#1c4270">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <title>Scouts Queensland - Youth Program Team Roadmap & Planner</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,40 +50,75 @@
       <!-- Center: View Switcher -->
       <nav class="view-tabs" aria-label="Planner Views">
         <button class="view-btn active" data-view="monthly" id="viewMonthlyBtn">
-          <span>📅</span> Monthly View
+          <span>📅</span> Monthly
         </button>
         <button class="view-btn" data-view="weekly" id="viewWeeklyBtn">
-          <span>📆</span> Weekly View
+          <span>📆</span> Weekly
+        </button>
+        <button class="view-btn" data-view="agenda" id="viewAgendaBtn">
+          <span>📋</span> Agenda
         </button>
       </nav>
 
       <!-- Right: Action Buttons -->
       <div class="header-controls">
-        <!-- Direct File Sync Button -->
-        <button class="btn btn-sync" id="fileSyncBtn" title="Sync directly with a shared OneDrive JSON file">
+        <!-- Direct File Sync Button (Desktop) -->
+        <button class="btn btn-sync desktop-only" id="fileSyncBtn" title="Sync directly with a shared OneDrive JSON file">
           <span id="fileSyncDot" class="sync-dot disconnected"></span>
           <span id="fileSyncLabel">📁 Connect OneDrive File</span>
         </button>
 
         <button class="btn btn-primary" id="addEntryBtn">
-          <span>➕</span> Add Entry
+          <span>➕</span> <span class="btn-text">Add Entry</span>
         </button>
-        <button class="btn btn-secondary" id="exportPdfBtn" title="Export clean landscape printable PDF">
-          <span>🖨️</span> Export PDF
-        </button>
-        <button class="btn btn-secondary" id="exportCsvBtn" title="Download current roadmap as CSV">
-          <span>⬇️</span> Export CSV
-        </button>
-        <button class="btn btn-secondary" id="importCsvBtn" title="Bulk upload items from CSV file">
-          <span>⬆️</span> Bulk Upload CSV
-        </button>
-        <button class="btn btn-secondary" id="importJsonBtn" title="Load roadmap data from a JSON file">
-          <span>📂</span> Import JSON
-        </button>
-        <input type="file" id="jsonFileInput" accept=".json" style="display: none;">
-        <button class="btn btn-secondary" id="exportJsonBtn" title="Download full JSON snapshot backup">
-          <span>💾</span> Backup JSON
-        </button>
+
+        <!-- Desktop Action Buttons -->
+        <div class="desktop-action-buttons">
+          <button class="btn btn-secondary" id="exportPdfBtn" title="Export clean landscape printable PDF">
+            <span>🖨️</span> Export PDF
+          </button>
+          <button class="btn btn-secondary" id="exportCsvBtn" title="Download current roadmap as CSV">
+            <span>⬇️</span> Export CSV
+          </button>
+          <button class="btn btn-secondary" id="importCsvBtn" title="Bulk upload items from CSV file">
+            <span>⬆️</span> Bulk Upload CSV
+          </button>
+          <button class="btn btn-secondary" id="importJsonBtn" title="Load roadmap data from a JSON file">
+            <span>📂</span> Import JSON
+          </button>
+          <input type="file" id="jsonFileInput" accept=".json" style="display: none;">
+          <button class="btn btn-secondary" id="exportJsonBtn" title="Download full JSON snapshot backup">
+            <span>💾</span> Backup JSON
+          </button>
+        </div>
+
+        <!-- Mobile More Actions Menu -->
+        <div class="mobile-more-container" id="mobileMoreContainer">
+          <button type="button" class="btn btn-secondary mobile-more-btn" id="mobileMoreBtn" aria-haspopup="true" aria-expanded="false" title="More options and exports">
+            <span>⋯</span> More
+          </button>
+          <div class="mobile-more-menu" id="mobileMoreMenu" hidden>
+            <button type="button" class="more-menu-item" id="mFileSyncBtn">
+              <span class="more-menu-icon">📁</span>
+              <span id="mobileSyncLabel">OneDrive Sync Settings</span>
+            </button>
+            <button type="button" class="more-menu-item" id="mExportPdfBtn">
+              <span class="more-menu-icon">🖨️</span> Export PDF
+            </button>
+            <button type="button" class="more-menu-item" id="mExportCsvBtn">
+              <span class="more-menu-icon">⬇️</span> Export CSV
+            </button>
+            <button type="button" class="more-menu-item" id="mImportCsvBtn">
+              <span class="more-menu-icon">⬆️</span> Bulk Upload CSV
+            </button>
+            <button type="button" class="more-menu-item" id="mImportJsonBtn">
+              <span class="more-menu-icon">📂</span> Import JSON
+            </button>
+            <button type="button" class="more-menu-item" id="mExportJsonBtn">
+              <span class="more-menu-icon">💾</span> Backup JSON
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </header>
@@ -88,13 +126,19 @@
   <!-- Toolbar: Search, Filters, Sorting, Stats -->
   <section class="toolbar-container no-print">
     <div class="toolbar">
-      <div class="toolbar-filters">
-        <!-- Search Box -->
+      <!-- Search & Mobile Filter Toggle -->
+      <div class="toolbar-primary-row">
         <div class="search-box">
           <span class="search-icon">🔍</span>
           <input type="text" id="searchInput" class="search-input" placeholder="Search tasks, tags...">
         </div>
+        <button type="button" class="btn btn-outline mobile-filter-btn" id="mobileFilterToggleBtn" aria-expanded="false" aria-controls="toolbarFilters" title="Filter roadmap items">
+          <span>⚡</span> Filters <span class="filter-count-badge" id="mobileFilterBadge" style="display: none;">0</span>
+        </button>
+      </div>
 
+      <!-- Filters Wrapper (Desktop inline, Mobile collapsible drawer) -->
+      <div class="toolbar-filters" id="toolbarFilters">
         <!-- Year Filter -->
         <div class="filter-group" id="yearFilterGroup">
           <label for="yearFilter">Year:</label>
@@ -159,6 +203,12 @@
             <option value="owner">Owner</option>
             <option value="category">Category</option>
           </select>
+        </div>
+
+        <div class="mobile-filter-drawer-footer mobile-only">
+          <button type="button" class="btn btn-primary" id="closeMobileFiltersBtn" style="width: 100%; justify-content: center;">
+            ✓ Apply & Close Filters
+          </button>
         </div>
       </div>
 
