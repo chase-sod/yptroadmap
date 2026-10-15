@@ -412,19 +412,27 @@ class StorageManager {
   // --- CSV Export & Import ---
   exportCSV() {
     const items = this.data.items || [];
-    const headers = ['ID', 'Title', 'StartDate', 'EndDate', 'Months', 'Owner', 'Category', 'Tags'];
-    const rows = items.map(item => [
-      item.id || '',
-      `"${(item.title || '').replace(/"/g, '""')}"`,
-      item.startDate || '',
-      item.endDate || '',
-      item.months || 1,
-      `"${(item.owner || '').replace(/"/g, '""')}"`,
-      `"${(item.category || '').replace(/"/g, '""')}"`,
-      `"${(item.tags || '').replace(/"/g, '""')}"`
-    ]);
+    const headers = ['ID', 'Title', 'StartDate', 'EndDate', 'Months', 'Owner', 'Category', 'Tags', 'Section', 'Notes'];
+    const rows = items.map(item => {
+      const sectionVal = Array.isArray(item.section)
+        ? item.section.join(', ')
+        : (item.section || item.sections || '');
+      const notesVal = item.notes || item.note || '';
+      return [
+        item.id || '',
+        `"${(item.title || '').replace(/"/g, '""')}"`,
+        item.startDate || '',
+        item.endDate || '',
+        item.months || 1,
+        `"${(item.owner || '').replace(/"/g, '""')}"`,
+        `"${(item.category || '').replace(/"/g, '""')}"`,
+        `"${(item.tags || '').replace(/"/g, '""')}"`,
+        `"${sectionVal.replace(/"/g, '""')}"`,
+        `"${notesVal.replace(/"/g, '""')}"`
+      ];
+    });
 
-    const csvContent = [headers.join(','), ...rows.map(r => r.join(','))].join('\r\n');
+    const csvContent = '\uFEFF' + [headers.join(','), ...rows.map(r => r.join(','))].join('\r\n');
     const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
@@ -475,6 +483,8 @@ class StorageManager {
       const tagIdx = headerLine.findIndex(h => h.includes('tag'));
       const ownerIdx = headerLine.findIndex(h => h.includes('owner') || h.includes('lead') || h.includes('assign'));
       const monthsIdx = headerLine.findIndex(h => h.includes('month') || h.includes('duration'));
+      const sectionIdx = headerLine.findIndex(h => h.includes('section'));
+      const notesIdx = headerLine.findIndex(h => h.includes('note') || h.includes('desc') || h.includes('detail') || h.includes('comment'));
 
       if (titleIdx === -1 || startIdx === -1) {
         return { success: false, error: 'CSV must contain at least "Title" and "StartDate" columns' };
@@ -487,6 +497,9 @@ class StorageManager {
         const startVal = cols[startIdx] || '';
         const endVal = endIdx !== -1 && cols[endIdx] ? cols[endIdx] : startVal;
         const catVal = catIdx !== -1 && cols[catIdx] ? cols[catIdx] : 'Branch Calendar Event';
+        const sectionRaw = sectionIdx !== -1 && cols[sectionIdx] ? cols[sectionIdx] : '';
+        const sectionArr = sectionRaw ? sectionRaw.split(',').map(s => s.trim()).filter(Boolean) : [];
+        const notesVal = notesIdx !== -1 && cols[notesIdx] ? cols[notesIdx] : '';
 
         imported.push({
           id: 'RM-' + (Date.now() + i),
@@ -496,7 +509,9 @@ class StorageManager {
           months: monthsIdx !== -1 && parseInt(cols[monthsIdx]) ? parseInt(cols[monthsIdx]) : 1,
           owner: ownerIdx !== -1 && cols[ownerIdx] ? cols[ownerIdx] : '',
           category: catVal,
-          tags: tagIdx !== -1 && cols[tagIdx] ? cols[tagIdx] : ''
+          tags: tagIdx !== -1 && cols[tagIdx] ? cols[tagIdx] : '',
+          section: sectionArr,
+          notes: notesVal
         });
 
         // Ensure category registered

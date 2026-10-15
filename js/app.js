@@ -352,6 +352,30 @@ document.addEventListener('DOMContentLoaded', () => {
       endInput?.addEventListener('input', () => this.updateModalDuration());
       endInput?.addEventListener('change', () => this.updateModalDuration());
 
+      // Section Multi-Select Listeners
+      const selectAllSectionsBtn = document.getElementById('selectAllSectionsBtn');
+      const clearAllSectionsBtn = document.getElementById('clearAllSectionsBtn');
+
+      selectAllSectionsBtn?.addEventListener('click', () => {
+        document.querySelectorAll('input[name="entrySection"]').forEach(cb => {
+          cb.checked = true;
+          cb.closest('.section-chip')?.classList.add('is-checked');
+        });
+      });
+
+      clearAllSectionsBtn?.addEventListener('click', () => {
+        document.querySelectorAll('input[name="entrySection"]').forEach(cb => {
+          cb.checked = false;
+          cb.closest('.section-chip')?.classList.remove('is-checked');
+        });
+      });
+
+      document.querySelectorAll('input[name="entrySection"]').forEach(cb => {
+        cb.addEventListener('change', () => {
+          cb.closest('.section-chip')?.classList.toggle('is-checked', cb.checked);
+        });
+      });
+
       // CSV Import Dialog
       const csvDialog = document.getElementById('csvDialog');
       const closeCsvBtn = document.getElementById('closeCsvDialogBtn');
@@ -1087,7 +1111,14 @@ document.addEventListener('DOMContentLoaded', () => {
           const tags = (i.tags || '').toLowerCase();
           const cat = (i.category || '').toLowerCase();
           const owner = (i.owner || '').toLowerCase();
-          return title.includes(this.searchQuery) || tags.includes(this.searchQuery) || cat.includes(this.searchQuery) || owner.includes(this.searchQuery);
+          const section = (Array.isArray(i.section) ? i.section.join(' ') : (i.section || i.sections || '')).toLowerCase();
+          const notes = (i.notes || i.note || '').toLowerCase();
+          return title.includes(this.searchQuery) ||
+                 tags.includes(this.searchQuery) ||
+                 cat.includes(this.searchQuery) ||
+                 owner.includes(this.searchQuery) ||
+                 section.includes(this.searchQuery) ||
+                 notes.includes(this.searchQuery);
         });
       }
 
@@ -1805,6 +1836,16 @@ document.addEventListener('DOMContentLoaded', () => {
       const ownerInput = document.getElementById('entryOwner');
       if (ownerInput) ownerInput.value = '';
 
+      // Reset Section Checkboxes
+      document.querySelectorAll('input[name="entrySection"]').forEach(cb => {
+        cb.checked = false;
+        cb.closest('.section-chip')?.classList.remove('is-checked');
+      });
+
+      // Reset Notes
+      const notesInput = document.getElementById('entryNotes');
+      if (notesInput) notesInput.value = '';
+
       this.populateModalCategoryOptions();
       this.updateModalDuration();
 
@@ -1830,6 +1871,28 @@ document.addEventListener('DOMContentLoaded', () => {
       const ownerInput = document.getElementById('entryOwner');
       if (ownerInput) ownerInput.value = item.owner || '';
       document.getElementById('entryTags').value = item.tags || '';
+
+      // Populate Section Multi-Select
+      let activeSections = [];
+      if (Array.isArray(item.section)) {
+        activeSections = item.section;
+      } else if (typeof item.section === 'string' && item.section.trim()) {
+        activeSections = item.section.split(',').map(s => s.trim());
+      } else if (Array.isArray(item.sections)) {
+        activeSections = item.sections;
+      } else if (typeof item.sections === 'string' && item.sections.trim()) {
+        activeSections = item.sections.split(',').map(s => s.trim());
+      }
+
+      document.querySelectorAll('input[name="entrySection"]').forEach(cb => {
+        const isChecked = activeSections.includes(cb.value);
+        cb.checked = isChecked;
+        cb.closest('.section-chip')?.classList.toggle('is-checked', isChecked);
+      });
+
+      // Populate Notes
+      const notesInput = document.getElementById('entryNotes');
+      if (notesInput) notesInput.value = item.notes || item.note || '';
 
       this.updateModalDuration();
 
@@ -1859,6 +1922,9 @@ document.addEventListener('DOMContentLoaded', () => {
       const tags = document.getElementById('entryTags').value.trim();
       const months = this.calculateDurationMonths(startDate, endDate);
 
+      const checkedSections = Array.from(document.querySelectorAll('input[name="entrySection"]:checked')).map(cb => cb.value);
+      const notes = document.getElementById('entryNotes')?.value.trim() || '';
+
       if (!title || !startDate) {
         alert('Please fill in both Title and Start Date.');
         return;
@@ -1873,7 +1939,9 @@ document.addEventListener('DOMContentLoaded', () => {
           endDate,
           owner,
           tags,
-          months
+          months,
+          section: checkedSections,
+          notes
         });
       } else {
         window.storageManager.addItem({
@@ -1883,7 +1951,9 @@ document.addEventListener('DOMContentLoaded', () => {
           endDate,
           owner,
           tags,
-          months
+          months,
+          section: checkedSections,
+          notes
         });
       }
 

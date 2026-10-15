@@ -1227,6 +1227,76 @@ dialog::backdrop {
   gap: 1rem;
 }
 
+/* Section Multi-Select Form Control */
+.section-checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.25rem 0;
+}
+
+.section-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.4rem 0.75rem;
+  background-color: #ffffff;
+  border: 1.5px solid var(--border-dark);
+  border-radius: var(--radius-full);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-main);
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.15s ease-in-out;
+}
+
+.section-chip:hover {
+  background-color: #f8fafc;
+  border-color: #94a3b8;
+}
+
+.section-chip input[type="checkbox"] {
+  appearance: auto;
+  accent-color: var(--scouts-navy);
+  margin: 0;
+  cursor: pointer;
+}
+
+.section-chip.is-checked,
+.section-chip:has(input[type="checkbox"]:checked) {
+  background-color: #eff6ff;
+  border-color: var(--scouts-blue);
+  color: var(--scouts-navy);
+  font-weight: 700;
+  box-shadow: 0 1px 3px rgba(0, 107, 158, 0.12);
+}
+
+.section-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.btn-text-action {
+  background: none;
+  border: none;
+  color: var(--scouts-navy);
+  cursor: pointer;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: 600;
+  text-decoration: underline;
+  transition: color 0.15s ease;
+}
+
+.btn-text-action:hover {
+  color: var(--scouts-blue);
+}
+
 .dialog-footer {
   padding: 1rem 1.5rem;
   background: #f8fafc;

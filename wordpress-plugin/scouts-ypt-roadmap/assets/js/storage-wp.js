@@ -569,10 +569,14 @@ class StorageManager {
   // --- CSV Export & Import ---
   exportCSV() {
     const items = this.getItems();
-    const headers = ['ID', 'Title', 'StartDate', 'EndDate', 'Months', 'Owner', 'Category', 'Tags'];
+    const headers = ['ID', 'Title', 'StartDate', 'EndDate', 'Months', 'Owner', 'Category', 'Tags', 'Section', 'Notes'];
     const rows = [headers.join(',')];
 
     items.forEach(item => {
+      const sectionVal = Array.isArray(item.section)
+        ? item.section.join(', ')
+        : (item.section || item.sections || '');
+      const notesVal = item.notes || item.note || '';
       const row = [
         item.id || '',
         `"${(item.title || '').replace(/"/g, '""')}"`,
@@ -581,7 +585,9 @@ class StorageManager {
         item.months || 1,
         `"${(item.owner || '').replace(/"/g, '""')}"`,
         `"${(item.category || '').replace(/"/g, '""')}"`,
-        `"${(item.tags || '').replace(/"/g, '""')}"`
+        `"${(item.tags || '').replace(/"/g, '""')}"`,
+        `"${sectionVal.replace(/"/g, '""')}"`,
+        `"${notesVal.replace(/"/g, '""')}"`
       ];
       rows.push(row.join(','));
     });
@@ -641,6 +647,8 @@ class StorageManager {
       const ownerIdx = headerMap['owner'] ?? headerMap['lead'] ?? -1;
       const catIdx = headerMap['category'] ?? headerMap['type'] ?? -1;
       const tagsIdx = headerMap['tags'] ?? headerMap['tag'] ?? -1;
+      const sectionIdx = headerMap['section'] ?? headerMap['sections'] ?? -1;
+      const notesIdx = headerMap['notes'] ?? headerMap['note'] ?? headerMap['description'] ?? -1;
 
       const imported = [];
       for (let i = 1; i < lines.length; i++) {
@@ -654,6 +662,9 @@ class StorageManager {
         let owner = (ownerIdx !== -1 && cols[ownerIdx]) ? cols[ownerIdx].trim() : '';
         let category = (catIdx !== -1 && cols[catIdx]) ? cols[catIdx].trim() : 'Event';
         let tags = (tagsIdx !== -1 && cols[tagsIdx]) ? cols[tagsIdx].trim() : '';
+        let sectionRaw = (sectionIdx !== -1 && cols[sectionIdx]) ? cols[sectionIdx].trim() : '';
+        let section = sectionRaw ? sectionRaw.split(',').map(s => s.trim()).filter(Boolean) : [];
+        let notes = (notesIdx !== -1 && cols[notesIdx]) ? cols[notesIdx].trim() : '';
 
         imported.push({
           id: 'RM-' + Date.now() + '-' + i,
@@ -663,9 +674,12 @@ class StorageManager {
           months,
           owner,
           category,
-          tags
+          tags,
+          section,
+          notes
         });
       }
+
 
       if (imported.length === 0) {
         return { success: false, error: 'No valid event rows found in CSV file.' };

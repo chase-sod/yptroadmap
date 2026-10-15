@@ -4,7 +4,7 @@ Tags: scouts, roadmap, planner, timeline, gantt, event calendar
 Requires at least: 5.4
 Tested up to: 6.7
 Requires PHP: 7.4
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GPLv2 or later
 
 Interactive, responsive multi-view roadmap and planner for Scouts Queensland Youth Program Team with real-time central database sync.
@@ -32,6 +32,12 @@ Key Features:
 5. In **wp-admin > YPT Roadmap**, you can configure permissions, customize the URL slug, or restore database backups.
 
 == Changelog ==
+
+= 1.0.3 =
+* Added Section multi-select field (Joey Scouts, Cub Scouts, Scouts, Venturer Scouts, Rover Scouts, Adults) with touch-friendly chip controls and Select All / Clear shortcuts.
+* Added Notes field for capturing planning context, location, links, and reference details.
+* Updated CSV export and import engines to support Section and Notes columns.
+* Integrated Section and Notes into universal search filter.
 
 = 1.0.2 =
 * Added mobile-first Agenda / Card View (`📋 Agenda`).

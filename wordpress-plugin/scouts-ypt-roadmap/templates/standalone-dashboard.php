@@ -322,6 +322,54 @@ $user_name = $current_user && $current_user->ID ? $current_user->display_name : 
           </div>
 
           <div class="form-group">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.35rem;">
+              <label style="margin-bottom: 0; font-weight: 700;">Section</label>
+              <div style="font-size: 0.75rem; display: flex; gap: 0.5rem; align-items: center;">
+                <button type="button" class="btn-text-action" id="selectAllSectionsBtn">Select All</button>
+                <span style="color: var(--text-muted);">|</span>
+                <button type="button" class="btn-text-action" id="clearAllSectionsBtn">Clear</button>
+              </div>
+            </div>
+            <div class="section-checkbox-group" id="entrySectionGroup">
+              <label class="section-chip" data-section="Joey Scouts">
+                <input type="checkbox" name="entrySection" value="Joey Scouts">
+                <span class="section-dot" style="background-color: #854d0e;"></span>
+                <span class="chip-label">Joey Scouts</span>
+              </label>
+              <label class="section-chip" data-section="Cub Scouts">
+                <input type="checkbox" name="entrySection" value="Cub Scouts">
+                <span class="section-dot" style="background-color: #d97706;"></span>
+                <span class="chip-label">Cub Scouts</span>
+              </label>
+              <label class="section-chip" data-section="Scouts">
+                <input type="checkbox" name="entrySection" value="Scouts">
+                <span class="section-dot" style="background-color: #16a34a;"></span>
+                <span class="chip-label">Scouts</span>
+              </label>
+              <label class="section-chip" data-section="Venturer Scouts">
+                <input type="checkbox" name="entrySection" value="Venturer Scouts">
+                <span class="section-dot" style="background-color: #dc2626;"></span>
+                <span class="chip-label">Venturer Scouts</span>
+              </label>
+              <label class="section-chip" data-section="Rover Scouts">
+                <input type="checkbox" name="entrySection" value="Rover Scouts">
+                <span class="section-dot" style="background-color: #991b1b;"></span>
+                <span class="chip-label">Rover Scouts</span>
+              </label>
+              <label class="section-chip" data-section="Adults">
+                <input type="checkbox" name="entrySection" value="Adults">
+                <span class="section-dot" style="background-color: #1c4270;"></span>
+                <span class="chip-label">Adults</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="entryNotes">Notes</label>
+            <textarea id="entryNotes" rows="3" placeholder="Additional details, planning notes, location, or reference info..."></textarea>
+          </div>
+
+          <div class="form-group">
             <label for="entryMonths">Calculated Duration</label>
             <input type="text" id="entryMonths" readonly style="background-color: #f1f5f9; cursor: not-allowed; font-weight: 700; color: var(--scouts-navy);" value="—">
             <small style="color: var(--text-muted); font-size: 0.75rem;">Calculated automatically from Start & End Date</small>
